@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact - Notre Messe de Mariage | Contactez-nous</title>
+    <meta name="description" content="Contactez l'équipe de Notre Messe de Mariage. Nous sommes là pour répondre à toutes vos questions sur la préparation de votre messe de mariage.">
+    <meta name="keywords" content="contact, notre messe de mariage, aide, support, questions, formulaire de contact">
+    <link rel="canonical" href="https://www.notremessedemariage.fr/contact.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.notremessedemariage.fr/contact.html">
+    <meta property="og:title" content="Contact - Notre Messe de Mariage">
+    <meta property="og:description" content="Contactez-nous pour toute question sur la préparation de votre messe de mariage.">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Notre Messe de Mariage - Accueil">
+                <img src="images/logo_avectexte_horizontal.png" alt="Notre Messe de Mariage - Logo" width="200" height="50">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="futurs-maries.html">Futurs Mariés</a></li>
+                <li><a href="paroisses.html">Paroisses</a></li>
+                <li><a href="musiciens.html">Musiciens</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="https://app.notremessedemariage.fr" class="cta-button">Commencer</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="page-hero">
+        <div class="page-hero-content">
+            <h1>Contactez-nous</h1>
+            <p>Une question ? Un besoin d'accompagnement ? Notre équipe est là pour vous aider dans la préparation de votre célébration.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="contact-wrapper">
+                <!-- Informations de contact -->
+                <div class="contact-info fade-in">
+                    <h2 class="section-title">Nos coordonnées</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="social-links-contact">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-icons">
+
+                            <a href="https://www.instagram.com/notremessedemariage" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form-wrapper fade-in">
+                    <h2 class="section-title">Envoyez-nous un message</h2>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Votre nom">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="votre.email@exemple.fr">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet <span class="required">*</span></label>
+                            <select id="subject" name="subject" required aria-required="true">
+                                <option value="">Choisissez un sujet</option>
+                                <option value="couple">Je suis un couple</option>
+                                <option value="paroisse">Je représente une paroisse</option>
+                                <option value="musicien">Je suis musicien</option>
+                                <option value="technique">Question technique</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Décrivez votre demande..."></textarea>
+                        </div>
+                        En soumettant ce formulaire, vous acceptez que vos données soient utilisées pour répondre à votre demande. Consultez notre <a href="politique-de-confidentialite.html">politique de confidentialité</a> pour plus d'informations.
+                        <div class="form-group" style="margin-top:10px;">
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                Envoyer le message
+                            </button>
+                        </div>
+
+                        <p class="form-notice">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            Les champs marqués d'un * sont obligatoires. Nous vous répondrons dans les plus brefs délais.
+                        </p>
+
+                        <!-- Message de confirmation -->
+                        <div id="form-status" class="form-status" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ rapide Section -->
+    <section class="content-section alt">
+        <div class="content-container">
+            <h2 class="section-title fade-in">Questions fréquentes</h2>
+            <div class="faq-grid">
+                <article class="faq-item fade-in">
+                    <h3><i class="fas fa-question-circle" aria-hidden="true"></i> Comment créer un compte ?</h3>
+                    <p>Cliquez sur le bouton "Commencer" en haut de la page et suivez les instructions pour créer votre compte gratuitement.</p>
+                </article>
+
+
+                <article class="faq-item fade-in">
+                    <h3><i class="fas fa-question-circle" aria-hidden="true"></i> Puis-je personnaliser mon livret ?</h3>
+                    <p>Absolument ! Vous pouvez choisir vos textes, vos chants et personnaliser l'apparence de votre livret de messe.</p>
+                </article>
+
+                <article class="faq-item fade-in">
+                    <h3><i class="fas fa-question-circle" aria-hidden="true"></i> Comment contacter le support ?</h3>
+                    <p>Utilisez le formulaire ci-dessus ou envoyez-nous directement un email à contact@notremessedemariage.fr</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Notre Messe de Mariage</h3>
+                <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/notremessedemariage" aria-label="Suivez-nous sur Facebook" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/notremessedemariage" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/notremessedemariage" aria-label="Suivez-nous sur Twitter" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section" aria-label="Liens rapides">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="futurs-maries.html">Futurs Mariés</a></li>
+                    <li><a href="paroisses.html">Paroisses</a></li>
+                    <li><a href="musiciens.html">Musiciens</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" aria-label="Support">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a></p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Notre Messe de Mariage. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script>
+        // Gestion du formulaire de contact
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('form-status');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                
+                // Désactiver le bouton pendant l'envoi
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+                
+                try {
+                    // Utilisation de Formspree ou envoi direct
+                    // Pour l'instant, on simule l'envoi avec mailto
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const phone = formData.get('phone');
+                    const subject = formData.get('subject');
+                    const message = formData.get('message');
+                    
+                    const mailtoLink = `mailto:contact@notremessedemariage.fr?subject=${encodeURIComponent('Contact: ' + subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\n\nMessage:\n${message}`)}`;
+                    
+                    window.location.href = mailtoLink;
+                    
+                    // Afficher le message de succès
+                    formStatus.style.display = 'block';
+                    formStatus.className = 'form-status success';
+                    formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.';
+                    
+                    // Réinitialiser le formulaire
+                    contactForm.reset();
+                    
+                } catch (error) {
+                    formStatus.style.display = 'block';
+                    formStatus.className = 'form-status error';
+                    formStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.';
+                }
+                
+                // Réactiver le bouton
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                
+                // Faire défiler jusqu'au message de statut
+                formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+        }
+    </script>
+</body>
+</html>
