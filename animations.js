@@ -50,6 +50,22 @@ fadeInElements.forEach(element => {
     fadeInObserver.observe(element);
 });
 
+// ============= INTERSECTION OBSERVER POUR FADE-IN, SECTION-HEADER ET STEPS =============
+const inViewObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            inViewObserver.unobserve(entry.target); // Ne déclencher qu'une fois
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+// Observer tous les éléments qui nécessitent la classe in-view
+const inViewElements = document.querySelectorAll('.fade-in, .section-header, .step, .gallery-item');
+inViewElements.forEach(element => {
+    inViewObserver.observe(element);
+});
+
 // ============= PARALLAX EFFECT SUR HERO =============
 const heroSection = document.querySelector('.page-hero');
 if (heroSection) {
@@ -211,6 +227,23 @@ const imageObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
+});
+
+// ============= ANIMATION DE LA GALERIE =============
+const galleryObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            galleryObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+    galleryObserver.observe(item);
 });
 
 // ============= PARTICULES FLOTTANTES DANS LE HERO =============

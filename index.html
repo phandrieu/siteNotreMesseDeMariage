@@ -3,1027 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notre Messe de Mariage - Créez votre messe de mariage personnalisée</title>
-    <meta name="description" content="Organisez la messe de votre mariage en toute simplicité avec votre musicien préféré. Choisissez vos chants, créez votre livret personnalisé.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Notre Messe de Mariage - Créez votre messe de mariage personnalisée en ligne</title>
+    <meta name="description" content="Plateforme en ligne pour organiser la messe de votre mariage. Choisissez vos chants, collaborez avec votre musicien et paroisse, générez votre livret personnalisé. Simple, harmonieux et mémorable.">
+    <meta name="keywords" content="messe mariage, cérémonie mariage, chants mariage, livret messe, musicien mariage, paroisse, mariage catholique, organisation mariage religieux">
+    <meta name="author" content="Notre Messe de Mariage">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.notremessedemariage.fr/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.notremessedemariage.fr/">
+    <meta property="og:title" content="Notre Messe de Mariage - Créez votre messe de mariage personnalisée">
+    <meta property="og:description" content="La plateforme qui transforme l'organisation de votre cérémonie religieuse en une expérience simple et mémorable.">
+    <meta property="og:image" content="https://www.notremessedemariage.fr/images/logo_avectexte_horizontal.png">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.notremessedemariage.fr/">
+    <meta name="twitter:title" content="Notre Messe de Mariage - Créez votre messe de mariage personnalisée">
+    <meta name="twitter:description" content="Organisez la messe de votre mariage en toute simplicité avec votre musicien préféré.">
+    <meta name="twitter:image" content="https://www.notremessedemariage.fr/images/logo_avectexte_horizontal.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* === Intégration des polices locales === */
-        @font-face {
-            font-family: 'Alfarn';
-            src: url('./fonts/Alfarn-Regular.ttf') format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Avenir LT Pro';
-            src: url('./fonts/AvenirLTPro.ttf') format("truetype");
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        :root {
-            --color-primary: #FF8100;
-            --color-secondary: #652D90;
-            --color-tertiary: #E6DEF6;
-            --color-last: #61616F;
-            --color-bg: #FFFFFF;
-            --light-bg: #F5F5F5;
-            --text-dark: #2C2C2C;
-            --text-light: #61616F;
-        }
-
-        body {
-            font-family: 'Avenir LT Pro', Avenir, Helvetica, Arial, sans-serif;
-            color: var(--text-light);
-            overflow-x: hidden;
-            background-color: var(--color-bg);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Alfarn', serif;
-            font-weight: 400;
-            text-transform: uppercase;
-            color: var(--color-primary);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--color-secondary);
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            padding: 0.6rem 0;
-        }
-
-        nav.scrolled {
-            box-shadow: 0 4px 30px rgba(101, 45, 144, 0.3);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            font-family: 'Alfarn', serif;
-            text-transform: uppercase;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo i {
-            font-size: 1.8rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-            padding: 0.65rem 0;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-primary);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--color-primary);
-        }
-
-        .cta-button {
-            background: var(--color-primary);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 129, 0, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(255, 129, 0, 0.4);
-            background: #e67400;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            color: white;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--color-tertiary) 0%, #ffffff 100%);
-            padding-top: 80px;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero-background::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(101, 45, 144, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        .hero-background::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255, 129, 0, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 15s infinite ease-in-out reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(50px, 30px) scale(1.1); }
-        }
-
-        .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-text {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: var(--color-primary);
-            animation: fadeInUp 1s ease-out 0.2s backwards;
-        }
-
-        .hero-text .highlight {
-            color: var(--color-secondary);
-            position: relative;
-            display: inline-block;
-        }
-
-        .hero-text p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-            animation: fadeInUp 1s ease-out 0.4s backwards;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.6s backwards;
-        }
-
-        .hero-buttons .primary-btn {
-            background: var(--color-primary);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 129, 0, 0.3);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .hero-buttons .primary-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(255, 129, 0, 0.4);
-            background: #e67400;
-        }
-
-        .hero-buttons .secondary-btn {
-            background: white;
-            color: var(--color-secondary);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            border: 2px solid var(--color-secondary);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .hero-buttons .secondary-btn:hover {
-            background: var(--color-secondary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .hero-image {
-            position: relative;
-            animation: fadeInRight 1s ease-out 0.4s backwards;
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            transition: transform 0.3s;
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.02);
-        }
-
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-            border-radius: 20px;
-            z-index: -1;
-            opacity: 0.2;
-        }
-
-        /* Trust Badges Section */
-        .trust-badges {
-            background: linear-gradient(135deg, var(--color-tertiary) 0%, #ffffff 50%, var(--color-tertiary) 100%);
-            padding: 4rem 2rem;
-            margin-top: -2rem;
-            position: relative;
-        }
-
-        .badges-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .badge-item {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
-        }
-
-        .badge-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(101, 45, 144, 0.15);
-            border-color: var(--color-primary);
-        }
-
-        .badge-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--color-primary) 0%, #ff9500 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-            box-shadow: 0 8px 25px rgba(255, 129, 0, 0.3);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .badge-item:hover .badge-icon {
-            transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 12px 35px rgba(255, 129, 0, 0.5);
-        }
-
-        .badge-item h4 {
-            font-size: 1.8rem;
-            color: var(--color-secondary);
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .badge-item p {
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background: white;
-        }
-
-        .features-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .section-header.in-view {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .section-header h2 {
-            font-size: 2.8rem;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .feature-card {
-            background: var(--light-bg);
-            padding: 2.5rem;
-            border-radius: 20px;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .feature-card.in-view {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .feature-card:nth-child(2).in-view {
-            animation-delay: 0.2s;
-        }
-
-        .feature-card:nth-child(3).in-view {
-            animation-delay: 0.4s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(101, 45, 144, 0.15);
-            border-color: var(--color-primary);
-        }
-
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--color-secondary);
-        }
-
-        .feature-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* How It Works Section */
-        .how-it-works {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--color-tertiary) 0%, #ffffff 100%);
-        }
-
-        .how-it-works-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-            opacity: 0;
-            transform: scale(0.8);
-        }
-
-        .step.in-view {
-            animation: scaleIn 0.6s ease-out forwards;
-        }
-
-        .step:nth-child(2).in-view {
-            animation-delay: 0.2s;
-        }
-
-        .step:nth-child(3).in-view {
-            animation-delay: 0.4s;
-        }
-
-        .step:nth-child(4).in-view {
-            animation-delay: 0.6s;
-        }
-
-        @keyframes scaleIn {
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            font-weight: 700;
-            color: white;
-            box-shadow: 0 10px 30px rgba(101, 45, 144, 0.3);
-        }
-
-        .step h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--color-secondary);
-        }
-
-        .step p {
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 6rem 2rem;
-            background: white;
-        }
-
-        .gallery-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            height: 350px;
-            cursor: pointer;
-            opacity: 0;
-            transform: scale(0.9);
-        }
-
-        .gallery-item.in-view {
-            animation: scaleIn 0.6s ease-out forwards;
-        }
-
-        .gallery-item:nth-child(2).in-view {
-            animation-delay: 0.1s;
-        }
-
-        .gallery-item:nth-child(3).in-view {
-            animation-delay: 0.2s;
-        }
-
-        .gallery-item:nth-child(4).in-view {
-            animation-delay: 0.3s;
-        }
-
-        .gallery-item:nth-child(5).in-view {
-            animation-delay: 0.4s;
-        }
-
-        .gallery-item:nth-child(6).in-view {
-            animation-delay: 0.5s;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(101, 45, 144, 0.85), rgba(255, 129, 0, 0.85));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay i {
-            font-size: 3rem;
-            color: white;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-            color: white;
-        }
-
-        .testimonials-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonials .section-header h2,
-        .testimonials .section-header p {
-            color: white;
-        }
-
-        .testimonials-slider {
-            margin-top: 3rem;
-            position: relative;
-        }
-
-        .testimonial {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .testimonial-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .testimonial-role {
-            opacity: 0.8;
-            margin-top: 0.5rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 6rem 2rem;
-            background: var(--light-bg);
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: 2.5rem;
-            color: var(--color-primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-content p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-content .primary-btn {
-            background: var(--color-primary);
-            color: white;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 129, 0, 0.3);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .cta-content .primary-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(255, 129, 0, 0.4);
-            background: #e67400;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--color-secondary);
-            color: white;
-            padding: 3rem 2rem 1rem;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            line-height: 2;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: var(--secondary-color);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--color-primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Sound Wave Animation */
-        .sound-wave {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-            margin: 2rem 0;
-        }
-
-        .sound-wave span {
-            display: inline-block;
-            width: 4px;
-            height: 30px;
-            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-            border-radius: 2px;
-            animation: soundWave 1s ease-in-out infinite;
-        }
-
-        .sound-wave span:nth-child(2) { animation-delay: 0.1s; }
-        .sound-wave span:nth-child(3) { animation-delay: 0.2s; }
-        .sound-wave span:nth-child(4) { animation-delay: 0.3s; }
-        .sound-wave span:nth-child(5) { animation-delay: 0.4s; }
-
-        @keyframes soundWave {
-            0%, 100% { height: 10px; }
-            50% { height: 40px; }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 968px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: var(--color-secondary);
-                flex-direction: column;
-                justify-content: flex-start;
-                padding: 2rem;
-                transition: left 0.3s;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .features-grid,
-            .steps,
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-buttons .primary-btn,
-            .hero-buttons .secondary-btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .hero-text p {
-                font-size: 1rem;
-            }
-
-            .nav-container {
-                padding: 1rem;
-            }
-
-            .logo {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .fade-in.in-view {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-    </style>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Notre Messe de Mariage",
+      "description": "Plateforme en ligne pour organiser des messes de mariage",
+      "url": "https://www.notremessedemariage.fr",
+      "logo": "https://www.notremessedemariage.fr/images/logo_avectexte_horizontal.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33-1-23-45-67-89",
+        "contactType": "Service Client",
+        "email": "contact@notremessedemariage.fr",
+        "areaServed": "FR",
+        "availableLanguage": "French"
+      },
+      "sameAs": [
+        "https://www.facebook.com/notremessedemariage",
+        "https://www.instagram.com/notremessedemariage",
+        "https://twitter.com/notremessedemariage"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Notre Messe de Mariage",
+      "url": "https://www.notremessedemariage.fr",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.notremessedemariage.fr/recherche?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-music"></i>
-                Notre Messe de Mariage
+            <a href="index.html" class="logo" aria-label="Notre Messe de Mariage - Accueil">
+                <img src="images/logo_avectexte_horizontal.png" alt="Notre Messe de Mariage - Logo" width="200" height="50">
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html" aria-current="page">Accueil</a></li>
                 <li><a href="futurs-maries.html">Futurs Mariés</a></li>
                 <li><a href="paroisses.html">Paroisses</a></li>
                 <li><a href="musiciens.html">Musiciens</a></li>
                 <li><a href="a-propos.html">À propos</a></li>
                 <li><a href="#" class="cta-button">Commencer</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="accueil">
-        <div class="hero-background"></div>
+    <header class="hero" id="accueil">
+        <div class="hero-background" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Créez la <span class="highlight">messe de mariage</span> de vos rêves</h1>
                 <p>La plateforme qui transforme l'organisation de votre cérémonie religieuse en une expérience simple, harmonieuse et mémorable. Collaborez avec votre paroisse et votre musicien pour créer un moment unique qui vous ressemble.</p>
-                <div class="sound-wave">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
                 <div class="hero-buttons">
-                    <a href="#" class="primary-btn">
-                        <i class="fas fa-play-circle"></i>
+                    <a href="#" class="primary-btn" aria-label="Commencer à créer votre messe de mariage">
+                        <i class="fas fa-play-circle" aria-hidden="true"></i>
                         Commencer maintenant
                     </a>
-                    <a href="#comment-ca-marche" class="secondary-btn">
-                        <i class="fas fa-info-circle"></i>
+                    <a href="#comment-ca-marche" class="secondary-btn" aria-label="Découvrir comment fonctionne la plateforme">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
                         Comment ça marche
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="../assets/images/horizontal1.jpg" alt="Messe de mariage" onerror="this.src='../public/images/horizontal1.jpg'">
+                <img src="images/horizontal1.jpg" alt="Célébration de messe de mariage dans une église" width="600" height="500">
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Trust Badges Section -->
     <section class="trust-badges">
         <div class="container">
             <div class="badges-grid">
-                <div class="badge-item">
+                <article class="badge-item">
                     <div class="badge-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     </div>
                     <h4>100% Sécurisé</h4>
                     <p>Paiement et données protégés</p>
-                </div>
-                <div class="badge-item">
+                </article>
+                <article class="badge-item">
                     <div class="badge-icon">
-                        <i class="fas fa-user-friends"></i>
+                        <i class="fas fa-user-friends" aria-hidden="true"></i>
                     </div>
                     <h4 data-counter="500">0</h4>
                     <p>Couples accompagnés</p>
-                </div>
-                <div class="badge-item">
+                </article>
+                <article class="badge-item">
                     <div class="badge-icon">
-                        <i class="fas fa-church"></i>
+                        <i class="fas fa-church" aria-hidden="true"></i>
                     </div>
                     <h4 data-counter="150">0</h4>
                     <p>Paroisses partenaires</p>
-                </div>
-                <div class="badge-item">
+                </article>
+                <article class="badge-item">
                     <div class="badge-icon">
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <h4>4.9/5</h4>
                     <p>Satisfaction client</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1036,27 +173,27 @@
                 <p>Des outils professionnels pensés pour faciliter chaque étape de la préparation de votre cérémonie</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
+                <article class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-music"></i>
+                        <i class="fas fa-music" aria-hidden="true"></i>
                     </div>
                     <h3>Choix des chants</h3>
                     <p>Explorez notre répertoire liturgique soigneusement sélectionné. Choisissez les chants qui correspondent à vos goûts et créez une ambiance musicale unique pour votre célébration.</p>
-                </div>
-                <div class="feature-card">
+                </article>
+                <article class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-book-open"></i>
+                        <i class="fas fa-book-open" aria-hidden="true"></i>
                     </div>
                     <h3>Livret personnalisé</h3>
                     <p>Générez automatiquement un livret de messe élégant et professionnel. Chaque détail est pensé pour offrir à vos invités un support de qualité qu'ils conserveront précieusement.</p>
-                </div>
-                <div class="feature-card">
+                </article>
+                <article class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-guitar"></i>
+                        <i class="fas fa-guitar" aria-hidden="true"></i>
                     </div>
                     <h3>Collaboration avec votre musicien</h3>
                     <p>Travaillez en parfaite harmonie avec votre paroisse et votre musicien. Notre plateforme facilite les échanges et garantit une préparation sereine et coordonnée.</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1069,26 +206,26 @@
                 <p>Quelques étapes simples pour organiser votre messe</p>
             </div>
             <div class="steps">
-                <div class="step">
+                <article class="step">
                     <div class="step-number">1</div>
                     <h3>Créez votre compte</h3>
                     <p>Inscrivez-vous gratuitement et accédez à toutes les fonctionnalités de la plateforme</p>
-                </div>
-                <div class="step">
+                </article>
+                <article class="step">
                     <div class="step-number">2</div>
                     <h3>Choisissez vos chants</h3>
                     <p>Explorez le répertoire et sélectionnez les chants qui vous touchent</p>
-                </div>
-                <div class="step">
+                </article>
+                <article class="step">
                     <div class="step-number">3</div>
                     <h3>Collaborez avec votre musicien</h3>
                     <p>Partagez vos choix avec votre musicien et finalisez ensemble le programme</p>
-                </div>
-                <div class="step">
+                </article>
+                <article class="step">
                     <div class="step-number">4</div>
                     <h3>Générez votre livret</h3>
                     <p>Téléchargez et imprimez votre livret personnalisé pour vos invités</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1101,42 +238,42 @@
                 <p>Découvrez l'ambiance de nos cérémonies</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="../assets/images/vertical1.jpg" alt="Cérémonie 1" onerror="this.src='../public/images/vertical1.jpg'">
+                <article class="gallery-item">
+                    <img src="images/vertical1.jpg" alt="Cérémonie de mariage dans une église - Couple devant l'autel" width="300" height="350" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-search-plus" aria-hidden="true"></i>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/vertical2.jpg" alt="Cérémonie 2" onerror="this.src='../public/images/vertical2.jpg'">
+                </article>
+                <article class="gallery-item">
+                    <img src="images/vertical2.jpg" alt="Musiciens jouant pendant une messe de mariage" width="300" height="350" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-search-plus" aria-hidden="true"></i>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/vertical3.jpg" alt="Cérémonie 3" onerror="this.src='../public/images/vertical3.jpg'">
+                </article>
+                <article class="gallery-item">
+                    <img src="images/vertical3.jpg" alt="Chorale chantant pendant une cérémonie de mariage" width="300" height="350" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-search-plus" aria-hidden="true"></i>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/vertical4.jpg" alt="Cérémonie 4" onerror="this.src='../public/images/vertical4.jpg'">
+                </article>
+                <article class="gallery-item">
+                    <img src="images/vertical4.jpg" alt="Décoration florale dans une église pour un mariage" width="300" height="350" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-search-plus" aria-hidden="true"></i>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/horizontal2.jpg" alt="Cérémonie 5" onerror="this.src='../public/images/horizontal2.jpg'">
+                </article>
+                <article class="gallery-item">
+                    <img src="images/horizontal2.jpg" alt="Vue d'ensemble d'une célébration de mariage religieux" width="300" height="350" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-search-plus" aria-hidden="true"></i>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/images/wide1.jpg" alt="Cérémonie 6" onerror="this.src='../public/images/wide1.jpg'">
+                </article>
+                <article class="gallery-item">
+                    <img src="images/wide1.jpg" alt="Église décorée pour une cérémonie de mariage" width="300" height="350" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                        <i class="fas fa-search-plus" aria-hidden="true"></i>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1149,13 +286,13 @@
                 <p>Les témoignages de couples qui ont vécu une cérémonie inoubliable</p>
             </div>
             <div class="testimonials-slider">
-                <div class="testimonial">
-                    <div class="testimonial-text">
+                <article class="testimonial">
+                    <blockquote class="testimonial-text">
                         "Une plateforme extraordinaire qui nous a permis d'organiser notre messe de mariage en toute sérénité. Le livret personnalisé a été un véritable succès auprès de nos invités !"
-                    </div>
-                    <div class="testimonial-author">Sophie & Thomas</div>
-                    <div class="testimonial-role">Mariés le 15 juin 2024</div>
-                </div>
+                    </blockquote>
+                    <p class="testimonial-author">Sophie & Thomas</p>
+                    <p class="testimonial-role">Mariés le 15 juin 2024</p>
+                </article>
             </div>
         </div>
     </section>
@@ -1165,26 +302,32 @@
         <div class="cta-content fade-in">
             <h2>Prêt à créer votre messe de mariage ?</h2>
             <p>Rejoignez des centaines de couples qui ont déjà fait confiance à Notre Messe de Mariage pour organiser leur cérémonie</p>
-            <a href="#" class="primary-btn">
-                <i class="fas fa-heart"></i>
+            <a href="#" class="primary-btn" aria-label="Commencer gratuitement à créer votre messe">
+                <i class="fas fa-heart" aria-hidden="true"></i>
                 Commencer gratuitement
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Notre Messe de Mariage</h3>
                 <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/notremessedemariage" aria-label="Suivez-nous sur Facebook" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/notremessedemariage" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/notremessedemariage" aria-label="Suivez-nous sur Twitter" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
-            <div class="footer-section">
+            <div class="footer-section" aria-label="Liens rapides">
                 <h3>Liens rapides</h3>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
@@ -1193,7 +336,7 @@
                     <li><a href="#galerie">Galerie</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-section" aria-label="Support">
                 <h3>Support</h3>
                 <ul>
                     <li><a href="#">FAQ</a></li>
@@ -1204,8 +347,8 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p><i class="fas fa-envelope"></i> contact@notremessedemariage.fr</p>
-                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a></p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1213,199 +356,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements that need animation
-        document.querySelectorAll('.fade-in, .feature-card, .step, .gallery-item').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Parallax effect for hero background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroBackground = document.querySelector('.hero-background');
-            if (heroBackground) {
-                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
-        // Sound wave animation control
-        let soundWaveAnimation = true;
-        const soundWave = document.querySelector('.sound-wave');
-        
-        if (soundWave) {
-            soundWave.addEventListener('click', () => {
-                soundWaveAnimation = !soundWaveAnimation;
-                soundWave.style.animationPlayState = soundWaveAnimation ? 'running' : 'paused';
-                soundWave.querySelectorAll('span').forEach(span => {
-                    span.style.animationPlayState = soundWaveAnimation ? 'running' : 'paused';
-                });
-            });
-        }
-
-        // Gallery lightbox effect
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const img = this.querySelector('img');
-                const lightbox = document.createElement('div');
-                lightbox.style.cssText = `
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0,0,0,0.9);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    z-index: 10000;
-                    cursor: pointer;
-                    animation: fadeIn 0.3s;
-                `;
-                
-                const lightboxImg = document.createElement('img');
-                lightboxImg.src = img.src;
-                lightboxImg.style.cssText = `
-                    max-width: 90%;
-                    max-height: 90%;
-                    object-fit: contain;
-                    border-radius: 10px;
-                    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-                `;
-                
-                lightbox.appendChild(lightboxImg);
-                document.body.appendChild(lightbox);
-                
-                lightbox.addEventListener('click', () => {
-                    lightbox.style.animation = 'fadeOut 0.3s';
-                    setTimeout(() => lightbox.remove(), 300);
-                });
-            });
-        });
-
-        // Add fadeIn/fadeOut animations
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            @keyframes fadeOut {
-                from { opacity: 1; }
-                to { opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Preload images
-        const images = [
-            '../assets/images/horizontal1.jpg',
-            '../assets/images/horizontal2.jpg',
-            '../assets/images/vertical1.jpg',
-            '../assets/images/vertical2.jpg',
-            '../assets/images/vertical3.jpg',
-            '../assets/images/vertical4.jpg',
-            '../assets/images/wide1.jpg'
-        ];
-
-        images.forEach(src => {
-            const img = new Image();
-            img.src = src;
-        });
-
-        // Interactive hover effects on feature cards
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Add floating animation to hero image
-        const heroImage = document.querySelector('.hero-image');
-        if (heroImage) {
-            let floatDirection = 1;
-            let floatPosition = 0;
-            
-            setInterval(() => {
-                floatPosition += 0.5 * floatDirection;
-                if (floatPosition > 10 || floatPosition < -10) {
-                    floatDirection *= -1;
-                }
-                heroImage.style.transform = `translateY(${floatPosition}px)`;
-            }, 50);
-        }
-
-        console.log('Notre Messe de Mariage - Site chargé avec succès! 💒🎵');
-    </script>
     <script src="animations.js"></script>
 </body>
 </html>
