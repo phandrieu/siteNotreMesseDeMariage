@@ -128,7 +128,7 @@ footer { ... }
             <li><a href="paroisses.html">Paroisses</a></li>
             <li><a href="musiciens.html">Musiciens</a></li>
             <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="https://app.notremessedemariage.fr" class="cta-button">Commencer</a></li>
+            <li><a href="https://app.notremessedemariage.fr" class="cta-button">Inscription/Connexion</a></li>
         </ul>
         <button class="mobile-menu-btn" 
                 id="mobileMenuBtn" 
