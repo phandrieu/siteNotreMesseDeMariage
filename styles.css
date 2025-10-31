@@ -175,10 +175,9 @@ nav.scrolled {
     font-weight: 500;
     transition: all 0.3s var(--transition-smooth);
     position: relative;
-    padding: 0.65rem 0;
 }
 
-.nav-links a::after {
+.nav-links a:not(.cta-button)::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -190,11 +189,11 @@ nav.scrolled {
     transform: translateX(-50%);
 }
 
-.nav-links a:hover::after {
+.nav-links a:not(.cta-button):hover::after {
     width: 100%;
 }
 
-.nav-links a:hover {
+.nav-links a:not(.cta-button):hover {
     color: var(--color-primary);
     transform: translateY(-2px);
 }
@@ -210,10 +209,12 @@ nav.scrolled {
     box-shadow: 0 4px 15px rgba(255, 129, 0, 0.35);
     position: relative;
     overflow: hidden;
+    padding: 0.5rem;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
+    color: var(--color-secondary);
     box-shadow: 0 8px 30px rgba(255, 129, 0, 0.5);
 }
 
