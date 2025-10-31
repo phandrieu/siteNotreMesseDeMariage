@@ -150,7 +150,7 @@ Utilisez ce code pour mettre à jour les 3 pages restantes :
             <nav class="footer-section" aria-label="Support">
                 <h3>Support</h3>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
+
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Conditions d'utilisation</a></li>
                     <li><a href="#">Politique de confidentialité</a></li>
