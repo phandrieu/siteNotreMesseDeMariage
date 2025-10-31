@@ -127,7 +127,7 @@ nav {
     background: transparent;
     z-index: 1000;
     transition: all 0.4s var(--transition-smooth);
-    padding: 0.6rem 0;
+    padding: 0.2rem 0;
 }
 
 /* Ombre de texte pour améliorer la lisibilité sur fond transparent */
@@ -156,7 +156,7 @@ nav.scrolled .nav-links a {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -798,7 +798,7 @@ button:focus {
 
 .hero-text-centered h1 {
     font-size: 4.5rem;
-    color: white;
+    color: var(--color-primary);
     text-transform: uppercase;
     margin-bottom: 1.5rem;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
