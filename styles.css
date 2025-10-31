@@ -750,13 +750,32 @@ button:focus {
     min-height: 100vh;
     height: 100vh;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background image placed in a pseudo-element so we can apply a Gaussian blur */
+.hero-fullscreen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-image: url('images/wide1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    transform: scale(1.06); /* avoid visible edges from the blur */
+    z-index: 1;
+}
+
+/* Ensure hero content sits above the blurred background */
+.hero-fullscreen > * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-overlay {
