@@ -1,5 +1,37 @@
 // Animations et interactions de qualité pour NotreMesseDeMariage
 
+// ============= MOBILE MENU TOGGLE =============
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+
+if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const isExpanded = navLinks.classList.contains('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+        
+        // Changer l'icône du bouton
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    });
+
+    // Fermer le menu mobile quand on clique sur un lien
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+}
+
 // ============= NAVIGATION SCROLL EFFECT =============
 const nav = document.querySelector('nav');
 let lastScroll = 0;
