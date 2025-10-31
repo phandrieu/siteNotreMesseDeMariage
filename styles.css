@@ -1445,6 +1445,16 @@ button:focus {
         font-size: 1.3rem;
     }
 
+    .hero-top-right {
+        top: 80px;
+        right: 20px;
+    }
+
+    .hero-login-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
     .hero-image {
         order: -1;
     }
@@ -1481,6 +1491,16 @@ button:focus {
 
     .hero-subtitle {
         font-size: 1.1rem;
+    }
+
+    .hero-top-right {
+        top: 75px;
+        right: 15px;
+    }
+
+    .hero-login-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
     }
 
     .hero-text p {
