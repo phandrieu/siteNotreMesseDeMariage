@@ -62,7 +62,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const fadeInElements = document.querySelectorAll('.feature-card, .content-box, .pricing-card, .feature-list li, .section-title, .section-subtitle');
+const fadeInElements = document.querySelectorAll('.feature-card, .image-card, .content-box, .pricing-card, .feature-list li, .section-title, .section-subtitle');
 
 const fadeInObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
@@ -93,7 +93,7 @@ const inViewObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 // Observer tous les éléments qui nécessitent la classe in-view
-const inViewElements = document.querySelectorAll('.fade-in, .section-header, .step, .gallery-item');
+const inViewElements = document.querySelectorAll('.fade-in, .section-header, .step, .image-card, .gallery-item');
 inViewElements.forEach(element => {
     inViewObserver.observe(element);
 });

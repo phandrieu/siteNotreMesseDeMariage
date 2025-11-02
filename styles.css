@@ -128,7 +128,10 @@ nav {
     background: transparent;
     z-index: 1000;
     transition: all 0.4s var(--transition-smooth);
-    padding: 0.2rem 0;
+    padding: 0.4rem 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid transparent;
 }
 
 /* Ombre de texte pour améliorer la lisibilité sur fond transparent */
@@ -141,9 +144,13 @@ nav .nav-links a {
 }
 
 nav.scrolled {
-    box-shadow: var(--shadow-lg);
+    /* Remplace le fond violet par un effet "verre" translucide + ombre */
     padding: 0.4rem 0;
-    background: var(--color-secondary);
+    background: rgba(17, 14, 24, 0.35);
+    backdrop-filter: blur(10px) saturate(130%);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 nav.scrolled .logo img {
@@ -194,7 +201,7 @@ nav.scrolled .nav-links a {
     position: relative;
 }
 
-.nav-links a:not(.cta-button)::after {
+.nav-links a:not(.cta-button):not(.nav-icon)::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -206,7 +213,7 @@ nav.scrolled .nav-links a {
     transform: translateX(-50%);
 }
 
-.nav-links a:not(.cta-button):hover::after {
+.nav-links a:not(.cta-button):not(.nav-icon):hover::after {
     width: 100%;
 }
 
@@ -216,7 +223,7 @@ nav.scrolled .nav-links a {
 }
 
 .cta-button {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #ff9500 100%);
+    background: var(--color-primary); /* Orange du logo */
     color: white;
     padding: 0.8rem 1.8rem;
     border-radius: 50px;
@@ -244,6 +251,16 @@ nav.scrolled .nav-links a {
     cursor: pointer;
 }
 
+/* Icône sociale dans la navbar (pas de soulignement animé) */
+.nav-links .nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    width: 32px;
+    height: 32px;
+}
+
 /* Hero Section */
 .page-hero {
     min-height: 60vh;
@@ -252,8 +269,36 @@ nav.scrolled .nav-links a {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--color-tertiary) 0%, #ffffff 100%);
+    background: #000;
     padding: 120px 2rem 4rem;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/image4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    transform: scale(1.06);
+    z-index: 0;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(101, 45, 144, 0.35) 0%, rgba(255, 128, 0, 0.35) 100%);
+    z-index: 1;
 }
 
 .page-hero::before {
@@ -298,16 +343,17 @@ nav.scrolled .nav-links a {
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: var(--color-primary);
-    text-shadow: 0 2px 10px rgba(255, 129, 0, 0.1);
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .page-hero-content p {
     font-size: 1.3rem;
-    color: var(--text-light);
+    color: white;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Content Section */
@@ -452,7 +498,7 @@ nav.scrolled .nav-links a {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-primary) 0%, #ff9500 100%);
+    background: var(--color-primary); /* Orange du logo */
     color: white;
     padding: 1.1rem 2.8rem;
     border-radius: 50px;
@@ -593,6 +639,111 @@ footer::before {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* --- Footer compact layout (moins épais) --- */
+footer.footer-compact {
+    padding: 2rem 1rem; /* réduit l'épaisseur globale */
+}
+
+.footer-container.footer-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* resserre l'espacement interne */
+    margin-bottom: 0.5rem;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.25rem 0;
+    text-align: center;
+}
+
+/* S'assurer qu'aucune puce ne s'affiche dans les listes du footer compact */
+.footer-row ul { list-style: none; margin: 0; padding: 0; }
+.footer-row ul li { margin: 0; padding: 0; }
+
+/* Couleurs et états de liens uniformes dans le footer compact */
+footer.footer-compact a {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+}
+footer.footer-compact a:hover { color: var(--color-primary); text-decoration: underline; }
+
+.footer-row .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.footer-row .brand h3 { margin: 0; }
+.footer-row .brand p { margin: 0; color: rgba(255,255,255,0.85); }
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 1.05; /* interligne très serré pour le wrap */
+}
+
+.footer-links a:hover { color: var(--color-primary); }
+
+/* Réduction forte de l'interligne entre lignes lorsqu'il y a retour à la ligne */
+.footer-links { row-gap: 0.2rem; column-gap: 1rem; }
+
+/* Séparateurs discrets entre les liens de support */
+.footer-links li + li::before {
+    content: "•";
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0 0.6rem 0 0.2rem;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.footer-contact a { color: rgba(255,255,255,0.9); text-decoration: none; }
+.footer-contact a:hover { color: var(--color-primary); }
+
+/* Alignement propre des icônes de contact */
+.footer-contact li { display: inline-flex; align-items: center; gap: 0.5rem; }
+.footer-contact i { color: var(--color-primary); }
+
+/* Icônes sociaux un peu plus petits dans le footer compact */
+footer.footer-compact .social-links a { width: 36px; height: 36px; }
+
+/* Bloc social centré juste au-dessus du copyright */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0 0.25rem;
+}
+
+@media (max-width: 968px) {
+    .footer-row { justify-content: center; text-align: center; }
+    .footer-row .brand { flex-direction: column; }
+    .footer-links { justify-content: center; }
+    .footer-contact { justify-content: center; }
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .nav-links {
@@ -662,12 +813,12 @@ html {
 /* Amélioration de la sélection de texte */
 ::selection {
     background: var(--color-primary);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 ::-moz-selection {
     background: var(--color-primary);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* Scrollbar personnalisée */
@@ -728,6 +879,7 @@ button:focus {
     height: 50px;
     width: auto;
     transition: transform 0.3s ease;
+    border-radius: 12px; /* angles arrondis du logo */
 }
 
 .logo:hover img {
@@ -785,7 +937,8 @@ button:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(101, 45, 144, 0.473) 0%, rgba(255, 128, 0, 0.493) 100%);
+    /* Teinte très subtile: on réduit drastiquement les nuances bleues et orangées */
+    background: linear-gradient(135deg, rgba(101, 45, 144, 0.08) 0%, rgba(255, 128, 0, 0.08) 100%);
     z-index: 1;
 }
 
@@ -795,6 +948,8 @@ button:focus {
     text-align: center;
     max-width: 900px;
     padding: 2rem;
+    /* Abaisse nettement le bloc titre pour éviter l'effet collé à la navbar */
+    transform: translateY(10vh);
 }
 
 .hero-text-centered h1 {
@@ -802,7 +957,12 @@ button:focus {
     color: var(--color-primary);
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* Relief renforcé pour une meilleure lisibilité sur photo */
+    text-shadow:
+        0 2px 2px rgba(0, 0, 0, 0.25),
+        0 8px 30px rgba(0, 0, 0, 0.45),
+        0 0 16px rgba(255, 129, 0, 0.25);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.15);
     animation: fadeInUp 1s ease-out;
     line-height: 1.1;
 }
@@ -940,7 +1100,6 @@ button:focus {
 .hero-buttons .primary-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(255, 129, 0, 0.4);
-    background: #e67400;
 }
 
 .hero-buttons .secondary-btn {
@@ -1012,6 +1171,127 @@ button:focus {
     padding: 4rem 2rem;
     margin-top: -2rem;
     position: relative;
+}
+
+/* Launch Announcement Section - Inside Hero */
+.hero-content-centered .launch-grid {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-content-centered .launch-text {
+    text-align: center;
+}
+
+/* Bloc lancement inspiré du style Spotlight */
+.launch-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.8rem 2.2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.34));
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0; /* bande plein écran */
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.12), 0 10px 45px rgba(0,0,0,0.25);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 2rem; /* espace pour éviter que le bouton touche le bas */
+}
+
+.launch-title {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-size: 1.6rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.hero-content-centered .launch-text h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.launch-countdown {
+    display: inline-flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.2rem;
+    flex-wrap: wrap;
+}
+
+.launch-countdown .count-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 88px;
+    padding: 0.9rem 1.1rem;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    box-shadow: none; /* aucune ombre */
+    color: #fff;
+    transition: all 0.3s var(--transition-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.launch-countdown .count-item:hover { transform: translateY(-2px); }
+
+.launch-countdown .count-item .number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.launch-countdown .count-item .label {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 700;
+}
+
+.launch-countdown .count-item .label i {
+    margin-right: 6px;
+    color: rgba(255,255,255,0.85);
+}
+
+/* Barre de progression sous le compteur (progresse sur la minute) */
+/* Progress bar supprimée */
+
+/* séparateurs “:” entre les cases */
+.launch-countdown .count-item + .count-item { position: relative; }
+.launch-countdown .count-item + .count-item::before {
+    content: ':';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    color: rgba(255,255,255,0.75);
+    font-weight: 800;
+}
+
+/* Make sure the cta-button in launch section stands out */
+.hero-content-centered .launch-text .cta-button {
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0.9rem 2.5rem;
 }
 
 .badges-grid {
@@ -1104,20 +1384,29 @@ button:focus {
     margin: 0 auto;
 }
 
+.section-header .intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    color: var(--text-dark);
+}
+
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
 .feature-card {
-    background: var(--light-bg);
+    background: white;
     padding: 2.5rem;
     border-radius: 20px;
-    transition: all 0.3s;
-    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid var(--color-tertiary);
     opacity: 0;
     transform: translateY(30px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card.in-view {
@@ -1125,23 +1414,35 @@ button:focus {
 }
 
 .feature-card:nth-child(2).in-view {
-    animation-delay: 0.2s;
+    animation-delay: 0.1s;
 }
 
 .feature-card:nth-child(3).in-view {
+    animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(4).in-view {
+    animation-delay: 0.3s;
+}
+
+.feature-card:nth-child(5).in-view {
     animation-delay: 0.4s;
 }
 
+.feature-card:nth-child(6).in-view {
+    animation-delay: 0.5s;
+}
+
 .feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(101, 45, 144, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(101, 45, 144, 0.15);
     border-color: var(--color-primary);
 }
 
 .feature-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    background: linear-gradient(135deg, var(--color-primary), #ff9500);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1149,10 +1450,17 @@ button:focus {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: white;
+    box-shadow: 0 6px 20px rgba(255, 129, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(255, 129, 0, 0.5);
 }
 
 .feature-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: var(--color-secondary);
 }
@@ -1160,6 +1468,95 @@ button:focus {
 .feature-card p {
     color: var(--text-light);
     line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Image Cards — utilisés dans Features et How It Works pour un style cohérent avec le Spotlight */
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    min-height: 420px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.35s var(--transition-smooth), box-shadow 0.35s var(--transition-smooth);
+}
+
+.image-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition: transform 0.6s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+.image-card:hover img {
+    transform: scale(1.06);
+}
+
+.image-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.0) 70%);
+}
+
+.image-card-overlay h3 {
+    color: #fff;
+    margin: 0 0 0.3rem 0;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.image-card-overlay p {
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+}
+
+/* Petit label en haut à gauche (utilisé dans Features) */
+.chip {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(101,45,144,0.9), rgba(255,129,0,0.9));
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.chip i { color: #fff; }
+
+/* Badge d'étape (utilisé dans How It Works) */
+.step-card .step-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    box-shadow: 0 8px 20px rgba(101,45,144,0.35);
 }
 
 /* How It Works Section */
@@ -1227,6 +1624,189 @@ button:focus {
 .step p {
     color: var(--text-light);
     line-height: 1.7;
+}
+
+/* Harmoniser les grilles: sur desktop, 3 à 4 colonnes selon la section */
+.features .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.how-it-works .steps {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Responsiveness des image-cards */
+@media (max-width: 968px) {
+    .hero-content-centered { transform: translateY(6vh); }
+    .image-card { min-height: 360px; }
+    .image-card-overlay h3 { font-size: 1.35rem; }
+}
+
+@media (max-width: 640px) {
+    .hero-content-centered { transform: translateY(4vh); }
+    .image-card { min-height: 300px; }
+}
+
+/* Spotlight two-column section (same background as how-it-works) */
+.spotlight {
+    padding: 0 0 2rem 0; /* espace bas pour garantir la lisibilité des boutons */
+        background: linear-gradient(135deg, rgba(101, 45, 144, 0.35) 0%, rgba(255, 128, 0, 0.35) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.spotlight-container {
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Three-column spotlight grid (no carousel) */
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    align-items: stretch;
+    min-height: 85vh; /* plus de hauteur pour afficher entièrement titres + CTA */
+}
+
+.spotlight-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.spotlight-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33.33%; /* tiers bas de la photo */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.spotlight-overlay h2 {
+    font-size: 2.2rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.spotlight-overlay .cta-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 2.2rem;
+}
+
+.spotlight-content {
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spotlight-content h2 {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.spotlight-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.spotlight-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+.spotlight-points li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(101, 45, 144, 0.12);
+}
+
+.spotlight-points i {
+    color: var(--color-primary);
+}
+
+.spotlight-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.spotlight .secondary-btn {
+    background: white;
+    color: var(--color-secondary);
+    padding: 0.9rem 1.6rem;
+    border-radius: 40px;
+    font-weight: 700;
+    border: 2px solid var(--color-secondary);
+    text-decoration: none;
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.spotlight .secondary-btn:hover {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+@media (max-width: 968px) {
+    .spotlight-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .spotlight-image {
+        min-height: 520px;
+    }
+
+    .spotlight-image img {
+        position: relative;
+        max-height: none;
+    }
+
+    .spotlight-overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .spotlight-overlay .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.8rem;
+    }
 }
 
 /* Gallery Section */
@@ -1405,7 +1985,6 @@ button:focus {
 .cta-content .primary-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(255, 129, 0, 0.4);
-    background: #e67400;
 }
 
 /* Sound Wave Animation */
@@ -1465,6 +2044,20 @@ button:focus {
         font-size: 1.3rem;
     }
 
+    .hero-content-centered .launch-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .launch-countdown {
+        gap: 0.6rem;
+    }
+
+    .launch-countdown .count-item { min-width: 72px; padding: 0.75rem 0.9rem; }
+
+    .launch-countdown .count-item .number {
+        font-size: 1.6rem;
+    }
+
     .hero-top-right {
         top: 80px;
         right: 20px;
@@ -1511,6 +2104,24 @@ button:focus {
 
     .hero-subtitle {
         font-size: 1.1rem;
+    }
+
+    .hero-content-centered .launch-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .launch-countdown {
+        gap: 0.45rem;
+    }
+
+    .launch-countdown .count-item { min-width: 60px; padding: 0.55rem 0.75rem; }
+
+    .launch-countdown .count-item .number {
+        font-size: 1.3rem;
+    }
+
+    .launch-countdown .count-item .label {
+        font-size: 0.68rem;
     }
 
     .hero-top-right {
