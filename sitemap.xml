@@ -14,21 +14,21 @@
     
     <!-- Pages principales - Haute priorité -->
     <url>
-        <loc>https://www.notremessedemariage.fr/futurs-maries.html</loc>
+        <loc>https://www.notremessedemariage.fr/futurs-maries</loc>
         <lastmod>2025-11-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.notremessedemariage.fr/musiciens.html</loc>
+        <loc>https://www.notremessedemariage.fr/musiciens</loc>
         <lastmod>2025-11-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.notremessedemariage.fr/paroisses.html</loc>
+        <loc>https://www.notremessedemariage.fr/paroisses</loc>
         <lastmod>2025-11-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -36,7 +36,7 @@
     
     <!-- Pages secondaires - Priorité moyenne -->
     <url>
-        <loc>https://www.notremessedemariage.fr/a-propos.html</loc>
+        <loc>https://www.notremessedemariage.fr/a-propos</loc>
         <lastmod>2025-11-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -50,7 +50,7 @@
     </url>
     
     <url>
-        <loc>https://www.notremessedemariage.fr/contact.html</loc>
+        <loc>https://www.notremessedemariage.fr/contact</loc>
         <lastmod>2025-11-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
