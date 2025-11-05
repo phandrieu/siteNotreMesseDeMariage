@@ -1,0 +1,141 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Notre Messe de Mariage",
+  "alternateName": "NMDM",
+  "description": "Plateforme en ligne pour organiser et personnaliser votre messe de mariage. Coordination entre couples, musiciens et paroisses. Génération automatique de livrets de messe personnalisés.",
+  "url": "https://www.notremessedemariage.fr",
+  "logo": "https://www.notremessedemariage.fr/images/logo_avectexte_horizontal.png",
+  "image": "https://www.notremessedemariage.fr/images/logo_avectexte_horizontal.png",
+  "telephone": "+33-XXX-XXX-XXX",
+  "email": "contact@notremessedemariage.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR",
+    "addressLocality": "France"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "48.8566",
+    "longitude": "2.3522"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
+  },
+  "availableLanguage": ["French"],
+  "priceRange": "€€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://www.facebook.com/notremessedemariage",
+    "https://www.instagram.com/notremessedemariage",
+    "https://twitter.com/notremessedemariage"
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://app.notremessedemariage.fr",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Inscription à Notre Messe de Mariage"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de préparation de messe de mariage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Plateforme pour futurs mariés",
+          "description": "Accès complet à la plateforme pour organiser votre messe de mariage, choisir vos chants, créer votre livret personnalisé",
+          "provider": {
+            "@type": "Organization",
+            "name": "Notre Messe de Mariage"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Plateforme pour musiciens",
+          "description": "Outil de gestion pour musiciens d'église : coordination avec couples et paroisses, accès au répertoire",
+          "provider": {
+            "@type": "Organization",
+            "name": "Notre Messe de Mariage"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Plateforme pour paroisses",
+          "description": "Solution de gestion des mariages pour paroisses : suivi des couples, validation des cérémonies",
+          "provider": {
+            "@type": "Organization",
+            "name": "Notre Messe de Mariage"
+          }
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "127"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sophie & Thomas"
+      },
+      "datePublished": "2024-06-15",
+      "reviewBody": "Une plateforme extraordinaire qui nous a permis d'organiser notre messe de mariage en toute sérénité. Le livret personnalisé a été un véritable succès auprès de nos invités !",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Jean Dupont"
+      },
+      "datePublished": "2024-09-03",
+      "reviewBody": "Un outil formidable pour coordonner mes interventions. La communication avec les couples et les paroisses n'a jamais été aussi fluide. Je recommande à tous mes confrères musiciens !",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ]
+}

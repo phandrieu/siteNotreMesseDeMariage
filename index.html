@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <!-- Consent Manager -->
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/js/semiautomatic.min.js" data-cmp-cdid="cddecdb8e2906" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
+    
     <!-- SEO Meta Tags -->
     <title>Notre Messe de Mariage - Créez votre messe de mariage personnalisée en ligne</title>
     <meta name="description" content="Plateforme en ligne pour organiser la messe de votre mariage. Choisissez vos chants, collaborez avec votre musicien et paroisse, générez votre livret personnalisé. Simple, harmonieux et mémorable.">
@@ -32,6 +35,16 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6FSDFVMYG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B6FSDFVMYG');
+    </script>
+    
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +56,6 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="responsive.css">
     
     <!-- Structured Data - Organization Schema -->
     <script type="application/ld+json">
@@ -139,56 +151,111 @@
         <div class="features-container">
             <div class="section-header fade-in">
                 <h2>De la création à la célébration, tout en un seul endroit</h2>
-                <p class="intro-text">Notre Messe de Mariage centralise la préparation des célébrations : inscription gratuite, accès au répertoire communautaire (chants, textes liturgiques, suggestions de prières), coordination entre tous les acteurs, et génération automatique des documents.<br>
+                <p class="intro-text">Notre Messe de Mariage centralise la préparation des célébrations : inscription simple, accès au répertoire communautaire (chants, textes liturgiques, suggestions de prières), coordination entre tous les acteurs, et génération automatique des documents.<br>
 <strong>Une plateforme collaborative pour faciliter l'organisation de chaque cérémonie.</strong></p>
             </div>
-            <div class="features-grid">
-                <article class="image-card">
-                    <img src="images/wide1.jpg" onerror="this.onerror=null;this.src='images/horizontal2.jpg';" alt="Église et interface d'inscription" loading="lazy">
-                    <span class="chip"><i class="fas fa-user-plus" aria-hidden="true"></i> Inscription</span>
-                    <div class="image-card-overlay">
-                        <h3>Créez votre espace</h3>
-                        <p>Inscription gratuite et accès immédiat à tous les outils de la plateforme collaborative.</p>
+
+            <div class="section-subheader">
+                <h3>Pourquoi choisir Notre Messe de Mariage ?</h3>
+            </div>
+
+            <div class="features-benefits-grid">
+                <!-- Bénéfice 1 -->
+                <article class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Gagnez du temps</h3>
+                    <p>Centralisez toute votre préparation en un seul endroit et évitez les allers-retours inutiles</p>
+                </article>
+                
+                <!-- Bénéfice 2 -->
+                <article class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Fidélité liturgique</h3>
+                    <p>Respectez les traditions et la liturgie grâce à notre accompagnement et la validation de votre paroisse</p>
+                </article>
+                
+                <!-- Bénéfice 3 -->
+                <article class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration facilitée</h3>
+                    <p>Partagez facilement avec votre paroisse et vos musiciens pour une préparation harmonieuse</p>
+                </article>
+
+                <!-- Bénéfice 4 - Sécurité -->
+                <article class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Sécurisé</h3>
+                    <p>Paiement et données protégés selon les normes les plus strictes</p>
+                </article>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="section-subheader">
+                <h3>Comment ça marche ?</h3>
+                <p>Un processus simple en 6 étapes</p>
+            </div>
+
+            <div class="features-steps-grid">
+                <!-- Étape 1 -->
+                <article class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Créez votre espace</h4>
+                        <p>Inscription simple et accès immédiat à tous les outils de la plateforme</p>
                     </div>
                 </article>
-                <article class="image-card">
-                    <img src="images/vertical3.jpg" onerror="this.onerror=null;this.src='images/wide1.jpg';" alt="Chorale et chant liturgique" loading="lazy">
-                    <span class="chip"><i class="fas fa-music" aria-hidden="true"></i> Répertoire</span>
-                    <div class="image-card-overlay">
-                        <h3>Répertoire communautaire</h3>
-                        <p>Catalogue collaboratif de chants, textes liturgiques et suggestions de prières, enrichi par la communauté.</p>
+                
+                <!-- Étape 2 -->
+                <article class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Explorez le répertoire</h4>
+                        <p>Catalogue collaboratif de chants, textes liturgiques et suggestions de prières</p>
                     </div>
                 </article>
-                <article class="image-card">
-                    <img src="images/vertical2.jpg" onerror="this.onerror=null;this.src='images/wide1.jpg';" alt="Musiciens animant une célébration" loading="lazy">
-                    <span class="chip"><i class="fas fa-users" aria-hidden="true"></i> Collaboration</span>
-                    <div class="image-card-overlay">
-                        <h3>Coordination en temps réel</h3>
-                        <p>Échanges et validations entre mariés, paroisses et musiciens pour une préparation harmonieuse.</p>
+                
+                <!-- Étape 3 (anciennement 4) -->
+                <article class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Concevez le déroulé</h4>
+                        <p>Élaboration collaborative avec système de validation et commentaires</p>
                     </div>
                 </article>
-                <article class="image-card">
-                    <img src="images/vertical1.jpg" onerror="this.onerror=null;this.src='images/wide1.jpg';" alt="Couple à l'autel pendant la messe" loading="lazy">
-                    <span class="chip"><i class="fas fa-list-check" aria-hidden="true"></i> Déroulé</span>
-                    <div class="image-card-overlay">
-                        <h3>Conception du déroulé</h3>
-                        <p>Élaboration collaborative du déroulé complet et système de validation intégré et de commentaires.</p>
+                
+                <!-- Étape 4 (anciennement 3) -->
+                <article class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Collaborez en temps réel</h4>
+                        <p>Échanges et validations entre mariés, paroisses et musiciens</p>
                     </div>
                 </article>
-                <article class="image-card">
-                    <img src="images/horizontal2.jpg" onerror="this.onerror=null;this.src='images/wide1.jpg';" alt="Livret et partitions posés sur un banc d'église" loading="lazy">
-                    <span class="chip"><i class="fas fa-file-pdf" aria-hidden="true"></i> Documents</span>
-                    <div class="image-card-overlay">
-                        <h3>Génération automatique</h3>
-                        <p>Production instantanée des déroulés, livrets pour invités et partitions au format PDF.</p>
+                
+                <!-- Étape 5 (anciennement 6) -->
+                <article class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Suivez l'avancement</h4>
+                        <p>Notifications en temps réel des validations et étapes clés</p>
                     </div>
                 </article>
-                <article class="image-card">
-                    <img src="images/vertical4.jpg" onerror="this.onerror=null;this.src='images/wide1.jpg';" alt="Décor floral et lumière douce dans l'église" loading="lazy">
-                    <span class="chip"><i class="fas fa-bell" aria-hidden="true"></i> Suivi</span>
-                    <div class="image-card-overlay">
-                        <h3>Suivi partagé</h3>
-                        <p>Notifications en temps réel des validations et étapes clés pour tous les acteurs impliqués.</p>
+                
+                <!-- Étape 6 (anciennement 5) -->
+                <article class="step-card">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Générez vos documents</h4>
+                        <p>Production instantanée des déroulés, livrets et partitions au format PDF</p>
                     </div>
                 </article>
             </div>
@@ -224,38 +291,71 @@
         </div>
     </section>
 
-     <!-- Trust Badges Section -->
-    <section class="trust-badges">
-        <div class="container">
-            <div class="badges-grid">
-                <article class="badge-item">
-                    <div class="badge-icon">
-                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+     <!-- Objectifs 2026 Section (ancien trust badges) -->
+    <section class="trust-badges" id="objectifs-2026" data-signups-endpoint="https://app.notremessedemariage.fr/api/public/stats" data-signups-init="0">
+        <div class="features-container">
+            <div class="section-header">
+                <h2>Nos objectifs 2026</h2>
+                <p>Nous avons besoin de votre confiance et de votre soutien pour atteindre nos objectifs et construire ensemble une plateforme au service de tous les acteurs de la célébration.</p>
+                <p class="live-cta" style="color: #ff8100; font-weight: 700;">Actuellement <span id="liveSignups">0</span> inscrits sur la plateforme</p>
+            </div>
+            <div class="features-grid">
+                <!-- Objectif Couples -->
+                <article class="image-card objective-card">
+                    <img src="images/vertical1.jpg" onerror="this.onerror=null;this.src='images/wide1.jpg';" alt="Couples accompagnés - Objectif 2026" loading="lazy">
+                    <div class="objective-card-content">
+                        <h3 class="objective-number"><span class="objective-count" data-target="500">0</span> couples accompagnés</h3>
+                        <p class="objective-current">Actuellement <strong><span id="liveSignupsCard">0</span></strong> inscrits</p>
+                        <a href="https://app.notremessedemariage.fr" class="cta-button objective-cta">Nous aider</a>
                     </div>
-                    <h4>100% Sécurisé</h4>
-                    <p>Paiement et données protégés</p>
                 </article>
-                <article class="badge-item">
-                    <div class="badge-icon">
-                        <i class="fas fa-user-friends" aria-hidden="true"></i>
+
+                <!-- Objectif Paroisses -->
+                <article class="image-card objective-card">
+                    <img src="images/pexels-leonardo-delsabio-2150529415-32392965.jpg" onerror="this.onerror=null;this.src='images/wide1.jpg';" alt="Paroisses référencées - Objectif 2026" loading="lazy">
+                    <div class="objective-card-content">
+                        <h3 class="objective-number"><span class="objective-count" data-target="150">0</span> paroisses référencées</h3>
+                        <p class="objective-current">Actuellement <strong>0</strong> paroisses partenaires</p>
+                        <a href="https://app.notremessedemariage.fr" class="cta-button objective-cta">Nous aider</a>
                     </div>
-                    <h4 data-counter="500">0</h4>
-                    <p>Couples accompagnés</p>
                 </article>
-                <article class="badge-item">
-                    <div class="badge-icon">
-                        <i class="fas fa-church" aria-hidden="true"></i>
+
+                <!-- Objectif Musiciens -->
+                <article class="image-card objective-card">
+                    <img src="images/musicien-spotlight.jpg" onerror="this.onerror=null;this.src='images/image3.png';" alt="Musiciens référencés - Objectif 2026" loading="lazy">
+                    <div class="objective-card-content">
+                        <h3 class="objective-number"><span class="objective-count" data-target="200">0</span> musiciens référencés</h3>
+                        <p class="objective-current">Actuellement <strong>0</strong> musiciens référencés</p>
+                        <a href="https://app.notremessedemariage.fr" class="cta-button objective-cta">Nous aider</a>
                     </div>
-                    <h4 data-counter="150">0</h4>
-                    <p>Paroisses partenaires</p>
                 </article>
-                <article class="badge-item">
-                    <div class="badge-icon">
-                        <i class="fas fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h4>4.9/5</h4>
-                    <p>Satisfaction client</p>
-                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partenaires">
+        <div class="features-container">
+            <div class="section-header">
+                <h2>Nos partenaires</h2>
+                <p>Ils nous accompagnent et nous font confiance dans cette aventure</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="images/partner-placeholder.png" alt="Partenaire 1" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-placeholder.png" alt="Partenaire 2" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-placeholder.png" alt="Partenaire 3" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-placeholder.png" alt="Partenaire 4" loading="lazy">
+                </div>
+                <div class="partner-item">
+                    <img src="images/partner-placeholder.png" alt="Partenaire 5" loading="lazy">
+                </div>
             </div>
         </div>
     </section>
@@ -264,35 +364,193 @@
     <section class="testimonials">
         <div class="testimonials-container">
             <div class="section-header">
-                <h2>Ils nous font confiance</h2>
-                <p>Les témoignages de couples qui ont vécu une cérémonie inoubliable</p>
+                <h2>Avis</h2>
+                <div class="testimonials-meta">
+                    <div class="average-rating">
+                        <div class="average-stars">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                        </div>
+                        <p class="average-score"><strong>4.8</strong>/5 — Basé sur <strong>127</strong> avis</p>
+                    </div>
+                </div>
             </div>
-            <div class="testimonials-slider">
-                <article class="testimonial">
-                    <blockquote class="testimonial-text">
-                        "Une plateforme extraordinaire qui nous a permis d'organiser notre messe de mariage en toute sérénité. Le livret personnalisé a été un véritable succès auprès de nos invités !"
-                    </blockquote>
-                    <p class="testimonial-author">Sophie & Thomas</p>
-                    <p class="testimonial-role">Mariés le 15 juin 2024</p>
-                </article>
-            </div>
-        </div>
-    </section>
+            <div class="testimonials-slider-wrapper">
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Avis 1 - Couple marié -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/avatar-couple.jpg" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80/652D90/ffffff?text=ST';" alt="Sophie & Thomas" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Sophie & Thomas</h4>
+                                <p class="testimonial-badge"><i class="fas fa-heart" aria-hidden="true"></i> Mariés</p>
+                                <div class="testimonial-rating-line">
+                                    <div class="testimonial-rating" aria-label="Note: 5 étoiles sur 5">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="rating-number">5/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Une plateforme extraordinaire qui nous a permis d'organiser notre messe de mariage en toute sérénité. Le livret personnalisé a été un véritable succès auprès de nos invités !"
+                        </blockquote>
+                        <p class="testimonial-date">15 juin 2024</p>
+                    </article>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content fade-in">
-            <h2>Prêt à créer votre messe de mariage ?</h2>
-            <p>Rejoignez des centaines de couples qui ont déjà fait confiance à Notre Messe de Mariage pour organiser leur cérémonie</p>
-            <a href="https://app.notremessedemariage.fr/" class="primary-btn" aria-label="Commencer gratuitement à créer votre messe">
-                <i class="fas fa-heart" aria-hidden="true"></i>
-                Commencer gratuitement
-            </a>
+                    <!-- Avis 2 - Musicien -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/avatar-musicien.jpg" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80/FF8100/ffffff?text=JD';" alt="Jean Dupont" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Jean Dupont</h4>
+                                <p class="testimonial-badge"><i class="fas fa-music" aria-hidden="true"></i> Musicien</p>
+                                <div class="testimonial-rating-line">
+                                    <div class="testimonial-rating" aria-label="Note: 5 étoiles sur 5">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="rating-number">5/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Un outil formidable pour coordonner mes interventions. La communication avec les couples et les paroisses n'a jamais été aussi fluide. Je recommande à tous mes confrères musiciens !"
+                        </blockquote>
+                        <p class="testimonial-date">3 septembre 2024</p>
+                    </article>
+
+                    <!-- Avis 3 - Paroisse -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/avatar-paroisse.jpg" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80/652D90/ffffff?text=SP';" alt="Paroisse Saint-Pierre" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Paroisse Saint-Pierre</h4>
+                                <p class="testimonial-badge"><i class="fas fa-church" aria-hidden="true"></i> Paroisse</p>
+                                <div class="testimonial-rating-line">
+                                    <div class="testimonial-rating" aria-label="Note: 4 étoiles sur 5">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="far fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="rating-number">4/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Cette plateforme facilite grandement notre accompagnement des futurs mariés. La centralisation des informations et la génération automatique des documents nous font gagner un temps précieux."
+                        </blockquote>
+                        <p class="testimonial-date">12 octobre 2024</p>
+                    </article>
+
+                    <!-- Avis 4 - Couple marié (page 2) -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/avatar-couple2.jpg" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80/652D90/ffffff?text=ML';" alt="Marie & Luc" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Marie & Luc</h4>
+                                <p class="testimonial-badge"><i class="fas fa-heart" aria-hidden="true"></i> Mariés</p>
+                                <div class="testimonial-rating-line">
+                                    <div class="testimonial-rating" aria-label="Note: 5 étoiles sur 5">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="rating-number">5/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Grâce à cette plateforme, nous avons pu personnaliser chaque détail de notre cérémonie. Le suivi en temps réel avec notre paroisse et notre musicien a été un vrai plus !"
+                        </blockquote>
+                        <p class="testimonial-date">20 août 2024</p>
+                    </article>
+
+                    <!-- Avis 5 - Musicienne (page 2) -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/avatar-musicienne.jpg" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80/FF8100/ffffff?text=CD';" alt="Claire Dubois" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Claire Dubois</h4>
+                                <p class="testimonial-badge"><i class="fas fa-music" aria-hidden="true"></i> Musicienne</p>
+                                <div class="testimonial-rating-line">
+                                    <div class="testimonial-rating" aria-label="Note: 5 étoiles sur 5">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="rating-number">5/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Interface intuitive et pratique ! Je peux gérer tous mes contrats et plannings depuis un seul endroit. Mes couples sont ravis de cette collaboration fluide."
+                        </blockquote>
+                        <p class="testimonial-date">5 juillet 2024</p>
+                    </article>
+
+                    <!-- Avis 6 - Paroisse (page 2) -->
+                    <article class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="images/avatar-paroisse2.jpg" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80/652D90/ffffff?text=NB';" alt="Paroisse Notre-Dame" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Paroisse Notre-Dame</h4>
+                                <p class="testimonial-badge"><i class="fas fa-church" aria-hidden="true"></i> Paroisse</p>
+                                <div class="testimonial-rating-line">
+                                    <div class="testimonial-rating" aria-label="Note: 5 étoiles sur 5">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="rating-number">5/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Un outil moderne qui simplifie notre travail au quotidien. Les futurs mariés apprécient la transparence et la facilité d'accès à tous les documents."
+                        </blockquote>
+                        <p class="testimonial-date">18 septembre 2024</p>
+                    </article>
+                </div>
+                
+                <!-- Points de navigation -->
+                <div class="testimonials-dots" id="testimonialsDots">
+                    <button class="dot active" data-page="0" aria-label="Page 1"></button>
+                    <button class="dot" data-page="1" aria-label="Page 2"></button>
+                </div>
+            </div>
+            
+            <div class="testimonials-actions">
+                <a href="https://app.notremessedemariage.fr/avis" class="view-all-link">Voir tous les avis →</a>
+                <a href="https://app.notremessedemariage.fr" class="cta-button">Laisser un avis</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer role="contentinfo" class="footer-compact">
+        <!-- SEO Hidden Keywords -->
+        <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+            <span>organisation messe de mariage, préparation cérémonie religieuse, chants liturgiques mariage, livret messe personnalisé, musicien église mariage, paroisse mariage catholique, textes liturgiques mariage, prière des époux, psaume mariage, évangile mariage, prière universelle mariage, génération livret messe, collaboration paroisse musicien, plateforme numérique mariage religieux, outil organisation mariage église, répertoire chants religieux, partitions messe mariage, déroulé cérémonie mariage, sacrement mariage, célébration eucharistique mariage, animation liturgique mariage, animateur chants église, organiste mariage, guitariste messe mariage, chanteuse mariage religieux, duo musical église, soliste messe mariage, accompagnement musical liturgique, coordination mariage religieux, validation liturgique paroisse, préparation au mariage catholique, formation couples mariés, équipe pastorale mariage, diocèse mariage, prêtre officiant mariage, diacre mariage, célébrant mariage religieux, bénédiction nuptiale, échange des consentements, échange des alliances, bague mariage bénédiction, liturgie de la parole mariage, liturgie eucharistique mariage, communion mariés, offrande mariage, procession entrée mariés, procession sortie mariés, signature registre mariage, témoins mariage religieux, lecteurs messe mariage, intentions prière mariage, homélie mariage, bénédiction finale mariés, invités messe mariage, assemblée célébration mariage, nef église mariage, autel mariage décoration, fleurs église mariage, cierge mariage, lumière pascale mariage, croix mariage bénédiction, chorale mariage église, ensemble vocal mariage, groupe musical liturgique, chants entrée mariage, chants offertoire, chants communion mariage, chants sortie église, Ave Maria mariage, Alléluia mariage, psaume responsorial mariage, cantique mariage, hymne religieux mariage, chant d'action de grâce, louange mariage, adoration eucharistique mariage, messe complète mariage, célébration de la parole sans eucharistie, bénédiction mariage sans messe, cérémonie oecuménique mariage, mariage mixte catholique, mariage interreligieux église, demande dispense mariage, dispense de disparité de culte, préparation liturgique couple, parcours alpha couple, retraite préparation mariage, réunion équipe préparation mariage, entretien prénuptial prêtre, constitution dossier mariage église, certificat baptême mariage, certificat confirmation mariage, publication bans mariage, certificat prénuptial, acte de naissance mariage religieux, dispense âge mariage, autorisation évêque mariage, mariage en extérieur église, chapelle mariage, cathédrale mariage, basilique mariage, sanctuaire mariage religieux, mariage à l'étranger catholique, destination wedding église, mariage international paroisse</span>
+        </div>
         <div class="footer-container footer-compact">
             <!-- Ligne 1: Marque + réseaux -->
             <div class="footer-row brand-row">
@@ -305,12 +563,12 @@
             <!-- Ligne 2: Liens support (sur une seule ligne) -->
             <div class="footer-row links-row" aria-label="Support">
                 <ul class="footer-links">
-                    <li><a href="#">Conditions générales de vente et d'abonnement</a></li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Charte cookies</a></li>
-                    <li><a href="#">Conditions générales d'utilisations</a></li>
-                    <li><a href="#">Politique de droits de propriété intellectuelle</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="legal.html#cgv">Conditions générales de vente et d'abonnement</a></li>
+                    <li><a href="legal.html#mentions">Mentions légales</a></li>
+                    <li><a href="legal.html#cookies">Charte cookies</a></li>
+                    <li><a href="legal.html#cgu">Conditions générales d'utilisations</a></li>
+                    <li><a href="legal.html#propriete">Politique de droits de propriété intellectuelle</a></li>
+                    <li><a href="legal.html#confidentialite">Politique de confidentialité</a></li>
                 </ul>
             </div>
 
@@ -383,6 +641,157 @@
 
         update();
         const timer = setInterval(update, 1000);
+    })();
+    </script>
+    <script>
+    // Live signup counter + Objectives counters animation
+    (function() {
+        const section = document.getElementById('objectifs-2026');
+        if (!section) return;
+
+        const endpoint = section.dataset.signupsEndpoint;
+        const init = parseInt(section.dataset.signupsInit || '0', 10);
+        const liveEls = [
+            document.getElementById('liveSignups'),
+            document.getElementById('liveSignupsCard')
+        ].filter(Boolean);
+
+        function setLive(n) {
+            const formatted = Number.isFinite(n) ? n.toLocaleString('fr-FR') : '0';
+            liveEls.forEach(el => { el.textContent = formatted; });
+        }
+
+        setLive(init);
+
+        function extractSignups(data) {
+            if (typeof data === 'number') return data;
+            const keys = ['signups','inscrits','users','count','total','totalUsers','total_signups','userCount'];
+            for (const k of keys) {
+                if (Object.prototype.hasOwnProperty.call(data, k) && typeof data[k] === 'number') return data[k];
+            }
+            if (data && typeof data.stats === 'object') {
+                for (const k of keys) {
+                    if (Object.prototype.hasOwnProperty.call(data.stats, k) && typeof data.stats[k] === 'number') return data.stats[k];
+                }
+            }
+            // Cherche un nombre plausible en dernier recours
+            const scan = (obj) => {
+                for (const v of Object.values(obj)) {
+                    if (typeof v === 'number') return v;
+                    if (v && typeof v === 'object') {
+                        const nested = scan(v);
+                        if (typeof nested === 'number') return nested;
+                    }
+                }
+                return null;
+            };
+            return scan(data);
+        }
+
+        if (endpoint) {
+            fetch(endpoint, { headers: { 'Accept': 'application/json' } })
+                .then(r => r && r.ok ? r.json() : null)
+                .then(data => {
+                    const n = data ? extractSignups(data) : null;
+                    if (typeof n === 'number' && isFinite(n)) setLive(n);
+                })
+                .catch(() => { /* fallback silencieux vers la valeur initiale */ });
+        }
+
+        // Animation des compteurs d'objectifs au scroll
+        const counters = Array.from(section.querySelectorAll('.objective-count'));
+        function animateCount(el, to, duration = 1200) {
+            const start = performance.now();
+            const from = 0;
+            const fmt = new Intl.NumberFormat('fr-FR');
+            function step(t) {
+                const p = Math.min(1, (t - start) / duration);
+                const ease = 1 - Math.pow(1 - p, 3);
+                const val = Math.round(from + (to - from) * ease);
+                el.textContent = fmt.format(val);
+                if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        if ('IntersectionObserver' in window) {
+            const obs = new IntersectionObserver((entries, observer) => {
+                for (const entry of entries) {
+                    if (entry.isIntersecting) {
+                        counters.forEach(el => {
+                            const target = parseInt(el.dataset.target || '0', 10);
+                            animateCount(el, target);
+                        });
+                        observer.disconnect();
+                    }
+                }
+            }, { threshold: 0.2 });
+            obs.observe(section);
+        } else {
+            counters.forEach(el => {
+                const target = parseInt(el.dataset.target || '0', 10);
+                animateCount(el, target);
+            });
+        }
+    })();
+    </script>
+    <script>
+    // Testimonials carousel
+    (function() {
+        const grid = document.getElementById('testimonialsGrid');
+        const dotsContainer = document.getElementById('testimonialsDots');
+        if (!grid || !dotsContainer) return;
+
+        const cards = Array.from(grid.querySelectorAll('.testimonial-card'));
+        const cardsPerPage = 3;
+        const totalPages = Math.ceil(cards.length / cardsPerPage);
+        let currentPage = 0;
+
+        function showPage(pageIndex) {
+            // Fade out
+            grid.classList.add('fade-out');
+            
+            setTimeout(() => {
+                // Hide all cards
+                cards.forEach(card => card.style.display = 'none');
+                
+                // Show cards for current page
+                const start = pageIndex * cardsPerPage;
+                const end = start + cardsPerPage;
+                for (let i = start; i < end && i < cards.length; i++) {
+                    cards[i].style.display = 'flex';
+                }
+                
+                // Update dots
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === pageIndex);
+                });
+                
+                currentPage = pageIndex;
+                
+                // Fade in
+                grid.classList.remove('fade-out');
+            }, 300);
+        }
+
+        // Dots click handlers
+        dotsContainer.addEventListener('click', (e) => {
+            const dot = e.target.closest('.dot');
+            if (dot) {
+                const page = parseInt(dot.dataset.page, 10);
+                showPage(page);
+            }
+        });
+
+        // Auto-rotate every 8 seconds
+        setInterval(() => {
+            const nextPage = (currentPage + 1) % totalPages;
+            showPage(nextPage);
+        }, 8000);
+
+        // Initial display
+        showPage(0);
     })();
     </script>
     <script src="animations.js"></script>

@@ -363,4 +363,218 @@ document.querySelectorAll('.feature-list li').forEach(item => {
     });
 });
 
+// ============= OPTIMISATIONS MOBILE =============
+
+// Détection du type d'appareil
+const isMobile = window.matchMedia('(max-width: 767px)').matches;
+const isTablet = window.matchMedia('(max-width: 968px) and (min-width: 768px)').matches;
+
+// Désactiver les animations 3D sur mobile pour améliorer les performances
+if (isMobile) {
+    // Désactiver l'effet hover 3D sur mobile
+    document.querySelectorAll('.feature-card, .pricing-card').forEach(card => {
+        card.style.transform = 'none';
+        card.removeEventListener('mousemove', () => {});
+        card.removeEventListener('mouseleave', () => {});
+    });
+    
+    // Désactiver les particules flottantes sur mobile
+    document.querySelectorAll('.floating-particle').forEach(particle => {
+        particle.style.display = 'none';
+    });
+}
+
+// Fermer le menu mobile quand on clique en dehors
+document.addEventListener('click', (e) => {
+    if (navLinks && navLinks.classList.contains('active')) {
+        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    }
+});
+
+// Empêcher le scroll du body quand le menu mobile est ouvert
+if (navLinks) {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'class') {
+                if (navLinks.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    });
+    
+    observer.observe(navLinks, { attributes: true });
+}
+
+// Améliorer le touch sur iOS
+document.addEventListener('touchstart', () => {}, { passive: true });
+
+// Éviter le zoom sur les inputs en iOS
+if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        const currentSize = window.getComputedStyle(input).fontSize;
+        if (parseFloat(currentSize) < 16) {
+            input.style.fontSize = '16px';
+        }
+    });
+}
+
+// Gestion du viewport height sur mobile (problème de barre d'adresse)
+const setVH = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
+setVH();
+window.addEventListener('resize', debounce(setVH, 100));
+window.addEventListener('orientationchange', setVH);
+
+// Améliorer la performance du scroll sur mobile
+let ticking = false;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            // Logique de scroll ici
+            ticking = false;
+        });
+        ticking = true;
+    }
+}, { passive: true });
+
+// Détecter le swipe pour fermer le menu mobile
+if (navLinks && mobileMenuBtn) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    navLinks.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    navLinks.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    const handleSwipe = () => {
+        // Swipe vers la gauche pour fermer
+        if (touchStartX - touchEndX > 50) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    };
+}
+
+// Optimisation des images sur mobile
+if (isMobile) {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        // Charger des images de plus petite taille sur mobile si disponible
+        const mobileSrc = img.getAttribute('data-mobile-src');
+        if (mobileSrc) {
+            img.src = mobileSrc;
+        }
+    });
+}
+
+// Améliorer l'accessibilité des boutons tactiles
+const makeButtonsTouchFriendly = () => {
+    const buttons = document.querySelectorAll('.btn-primary, .cta-button, button');
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        }, { passive: true });
+        
+        button.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        }, { passive: true });
+    });
+};
+
+makeButtonsTouchFriendly();
+
+// Afficher un indicateur de chargement pour les transitions
+const showLoadingIndicator = () => {
+    const loader = document.createElement('div');
+    loader.className = 'page-loader';
+    loader.innerHTML = '<div class="loader-spinner"></div>';
+    loader.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    `;
+    
+    const spinner = loader.querySelector('.loader-spinner');
+    spinner.style.cssText = `
+        width: 50px;
+        height: 50px;
+        border: 4px solid var(--color-tertiary);
+        border-top-color: var(--color-primary);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    `;
+    
+    document.body.appendChild(loader);
+    
+    return {
+        show: () => {
+            loader.style.pointerEvents = 'all';
+            loader.style.opacity = '1';
+        },
+        hide: () => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.pointerEvents = 'none';
+            }, 300);
+        }
+    };
+};
+
+// Préchargement des pages pour une navigation plus fluide
+const preloadPages = () => {
+    const links = document.querySelectorAll('a[href$=".html"]');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            const href = link.getAttribute('href');
+            if (!link.dataset.preloaded) {
+                const prefetch = document.createElement('link');
+                prefetch.rel = 'prefetch';
+                prefetch.href = href;
+                document.head.appendChild(prefetch);
+                link.dataset.preloaded = 'true';
+            }
+        }, { once: true });
+    });
+};
+
+preloadPages();
+
 console.log('✨ Animations NotreMesseDeMariage chargées avec succès');
+console.log(`📱 Appareil détecté: ${isMobile ? 'Mobile' : isTablet ? 'Tablette' : 'Desktop'}`);

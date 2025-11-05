@@ -273,6 +273,12 @@ nav.scrolled .nav-links a {
     padding: 120px 2rem 4rem;
 }
 
+/* Variant photo: taller hero for better photo display */
+.page-hero.photo {
+    min-height: 75vh;
+    padding: 140px 2rem 5rem;
+}
+
 .page-hero::before {
     content: '';
     position: absolute;
@@ -347,6 +353,13 @@ nav.scrolled .nav-links a {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Orange titles for specific page heroes */
+.page-hero.photo h1,
+.page-hero.paroisses h1,
+.page-hero.musiciens h1 {
+    color: var(--color-primary); /* Orange */
+}
+
 .page-hero-content p {
     font-size: 1.3rem;
     color: white;
@@ -354,6 +367,66 @@ nav.scrolled .nav-links a {
     margin: 0 auto;
     line-height: 1.8;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Override: hero with background photo (used on Futurs Mariés) */
+.page-hero.photo::before,
+.page-hero.photo::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    animation: none;
+}
+
+.page-hero.photo::before {
+    /* Use horizontal1.jpg as hero background for Futurs Mariés page */
+    background-image: url('images/horizontal1.jpg');
+    background-size: cover;
+    /* center horizontally, slightly higher vertically to show faces */
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    filter: none; /* keep image crisp; rely on overlay below for legibility */
+    transform: none;
+    z-index: 0;
+}
+
+.page-hero.photo::after {
+    background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.5) 100%);
+    z-index: 1;
+}
+
+/* Page-specific hero variants */
+.page-hero.paroisses::before,
+.page-hero.paroisses::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    animation: none;
+}
+
+.page-hero.paroisses::before {
+    /* Use NDM_paris.jpg as hero background for Paroisses page */
+    background-image: url('images/NDM_paris.jpg');
+    background-size: cover;
+    /* center horizontally, slightly higher vertically to show Notre-Dame towers */
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    filter: none;
+    transform: none;
+    z-index: 0;
+}
+
+.page-hero.paroisses::after {
+    background: linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.5) 100%);
+    z-index: 1;
 }
 
 /* Content Section */
@@ -791,6 +864,11 @@ footer.footer-compact .social-links a { width: 36px; height: 36px; }
         padding: 100px 1rem 3rem;
     }
 
+    .page-hero.photo {
+        min-height: 60vh;
+        padding: 110px 1rem 3rem;
+    }
+
     .section-title {
         font-size: 1.8rem;
     }
@@ -1167,10 +1245,62 @@ button:focus {
 
 /* Trust Badges Section */
 .trust-badges {
-    background: linear-gradient(135deg, var(--color-tertiary) 0%, #ffffff 50%, var(--color-tertiary) 100%);
+    /* Warm mesh gradient to match the Features section */
+    background:
+        radial-gradient(at 18% 28%, rgba(255, 187, 133, 0.22) 0%, rgba(255, 187, 133, 0.16) 26%, transparent 65%),
+        radial-gradient(at 82% 72%, rgba(255, 209, 157, 0.20) 0%, rgba(255, 209, 157, 0.14) 28%, transparent 66%),
+        radial-gradient(at 50% 55%, rgba(255, 241, 204, 0.35) 0%, rgba(255, 241, 204, 0.22) 22%, transparent 60%),
+        linear-gradient(135deg, rgba(255, 129, 0, 0.045), rgba(101, 45, 144, 0.035)),
+        #fffaf5;
     padding: 4rem 2rem;
     margin-top: -2rem;
     position: relative;
+}
+
+/* Partners Section */
+.partners {
+    background: white;
+    padding: 5rem 2rem;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s var(--transition-smooth);
+    min-height: 120px;
+}
+
+.partner-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(101, 45, 144, 0.12);
+}
+
+.partner-item img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.partner-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* Launch Announcement Section - Inside Hero */
@@ -1353,7 +1483,32 @@ button:focus {
 /* Features Section */
 .features {
     padding: 6rem 2rem;
-    background: white;
+    /* Mesh gradient background (Option 5) with safe fallback */
+    background:
+    radial-gradient(at 18% 28%, rgba(255, 187, 133, 0.22) 0%, rgba(255, 187, 133, 0.16) 26%, transparent 65%),
+    radial-gradient(at 82% 72%, rgba(255, 209, 157, 0.20) 0%, rgba(255, 209, 157, 0.14) 28%, transparent 66%),
+    radial-gradient(at 50% 55%, rgba(255, 241, 204, 0.35) 0%, rgba(255, 241, 204, 0.22) 22%, transparent 60%),
+    linear-gradient(135deg, rgba(255, 129, 0, 0.045), rgba(101, 45, 144, 0.035)),
+    #fffaf5;
+}
+
+@media (max-width: 640px) {
+    /* Slightly subtler mesh on small screens to avoid visual noise */
+    .features {
+        background:
+            radial-gradient(at 25% 25%, rgba(255, 193, 140, 0.16) 0%, rgba(255, 193, 140, 0.12) 22%, transparent 52%),
+            radial-gradient(at 75% 75%, rgba(255, 214, 172, 0.16) 0%, rgba(255, 214, 172, 0.12) 24%, transparent 54%),
+            linear-gradient(135deg, rgba(255, 129, 0, 0.03), rgba(101, 45, 144, 0.02)),
+            #fffaf5;
+    }
+
+    .trust-badges {
+        background:
+            radial-gradient(at 25% 25%, rgba(255, 193, 140, 0.16) 0%, rgba(255, 193, 140, 0.12) 22%, transparent 52%),
+            radial-gradient(at 75% 75%, rgba(255, 214, 172, 0.16) 0%, rgba(255, 214, 172, 0.12) 24%, transparent 54%),
+            linear-gradient(135deg, rgba(255, 129, 0, 0.03), rgba(101, 45, 144, 0.02)),
+            #fffaf5;
+    }
 }
 
 .features-container {
@@ -1390,6 +1545,175 @@ button:focus {
     max-width: 900px;
     margin: 1.5rem auto 0;
     color: var(--text-dark);
+}
+
+/* Grille des bénéfices (en haut) */
+.features-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(101, 45, 144, 0.12);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #ff8100, #ff9500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: white;
+    box-shadow: 0 8px 24px rgba(255, 129, 0, 0.25);
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Séparateur entre sections */
+.section-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-tertiary), transparent);
+    margin: 4rem auto;
+    max-width: 600px;
+}
+
+.section-subheader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-subheader h3 {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.section-subheader p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Grille des étapes (processus) */
+.features-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s var(--transition-smooth);
+    border-left: 4px solid transparent;
+}
+
+.step-card:hover {
+    transform: translateX(8px);
+    border-left-color: var(--color-primary);
+    box-shadow: 0 8px 25px rgba(101, 45, 144, 0.1);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    box-shadow: 0 6px 18px rgba(101, 45, 144, 0.25);
+}
+
+.step-content h4 {
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.step-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Badge sécurité inline */
+.security-badge-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 3rem auto 0;
+    border: 2px solid var(--color-tertiary);
+}
+
+.security-icon {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 8px 24px rgba(101, 45, 144, 0.3);
+}
+
+.security-text h4 {
+    font-size: 1.4rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.security-text p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin: 0;
 }
 
 .features-grid {
@@ -1522,6 +1846,46 @@ button:focus {
     line-height: 1.6;
 }
 
+/* Cartes objectifs 2026: contenu centré au milieu, titre orange, CTA en bas */
+.objective-card {
+    min-height: 480px;
+}
+
+.objective-card-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.0) 100%);
+    text-align: center;
+}
+
+.objective-number {
+    color: #ff8100;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.8rem 0;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    line-height: 1.2;
+}
+
+.objective-current {
+    color: rgba(255,255,255,0.95);
+    font-size: 1rem;
+    margin: 0 0 1.5rem 0;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.objective-cta {
+    margin-top: auto;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+}
+
 /* Petit label en haut à gauche (utilisé dans Features) */
 .chip {
     position: absolute;
@@ -1540,6 +1904,30 @@ button:focus {
 }
 
 .chip i { color: #fff; }
+
+/* Badge d'étape numéroté pour les features */
+.step-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    box-shadow: 0 8px 24px rgba(101,45,144,0.4);
+    border: 3px solid rgba(255,255,255,0.3);
+}
+
+.step-badge i {
+    font-size: 1.2rem;
+}
 
 /* Badge d'étape (utilisé dans How It Works) */
 .step-card .step-badge {
@@ -1896,6 +2284,7 @@ button:focus {
 }
 
 /* Testimonials Section */
+/* Testimonials Section - Cards avec notation */
 .testimonials {
     padding: 6rem 2rem;
     background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
@@ -1903,7 +2292,7 @@ button:focus {
 }
 
 .testimonials-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -1912,35 +2301,233 @@ button:focus {
     color: white;
 }
 
-.testimonials-slider {
-    margin-top: 3rem;
-    position: relative;
+.testimonials-meta {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.testimonial {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 3rem;
-    border-radius: 20px;
+.average-rating {
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.average-stars {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.average-stars i {
+    color: #FFB800;
+    font-size: 1.4rem;
+}
+
+.average-score {
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.average-score strong {
+    font-size: 1.2rem;
+}
+
+.testimonials-slider-wrapper {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.testimonials-grid.fade-out {
+    opacity: 0;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card:nth-child(n+4) {
+    display: none;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primary);
+    flex-shrink: 0;
+}
+
+.testimonial-info {
+    flex: 1;
+}
+
+.testimonial-name {
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    margin: 0 0 0.3rem 0;
+    font-weight: 700;
+}
+
+.testimonial-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0 0 0.5rem 0;
+}
+
+.testimonial-badge i {
+    color: var(--color-primary);
+}
+
+.testimonial-rating-line {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.testimonial-rating i {
+    color: #FFB800;
+    font-size: 1rem;
+}
+
+.rating-number {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
 .testimonial-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
     font-style: italic;
+    margin: 0;
+    flex: 1;
 }
 
-.testimonial-author {
+.testimonial-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.testimonials-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+}
+
+.testimonials-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.testimonials-dots .dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.2);
+}
+
+.testimonials-dots .dot.active {
+    background: white;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.testimonials-actions {
+    text-align: center;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.view-all-link {
+    color: white;
+    font-size: 1rem;
     font-weight: 600;
-    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
-.testimonial-role {
-    opacity: 0.8;
-    margin-top: 0.5rem;
+.view-all-link:hover {
+    border-bottom-color: white;
+    opacity: 0.9;
+}
+
+.testimonials-actions .cta-button {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* Responsive testimonials */
+@media (max-width: 968px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .testimonial-card:nth-child(n+2) {
+        display: none;
+    }
+    
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (min-width: 969px) and (max-width: 1200px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonial-card:nth-child(3) {
+        display: none;
+    }
 }
 
 /* CTA Section */

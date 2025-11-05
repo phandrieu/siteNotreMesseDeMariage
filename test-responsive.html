@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Responsive - Notre Messe de Mariage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .device-frame {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .device-frame:hover {
+            transform: translateY(-10px);
+        }
+        
+        .device-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .device-name {
+            font-weight: 700;
+            color: #2C2C2C;
+            font-size: 1.2rem;
+        }
+        
+        .device-size {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .iframe-container {
+            position: relative;
+            background: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .device-iframe {
+            width: 100%;
+            border: none;
+            display: block;
+            background: white;
+        }
+        
+        .controls {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .controls h2 {
+            color: #2C2C2C;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .page-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-btn {
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .page-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .page-btn.active {
+            background: linear-gradient(135deg, #FF8100 0%, #ff9500 100%);
+            box-shadow: 0 4px 15px rgba(255, 129, 0, 0.3);
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .info-box p {
+            color: #61616F;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-box strong {
+            color: #2C2C2C;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .controls {
+                padding: 1.5rem;
+            }
+            
+            .page-buttons {
+                gap: 0.8rem;
+            }
+            
+            .page-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Test Responsive - Notre Messe de Mariage</h1>
+        
+        <div class="controls">
+            <h2>📱 Choisissez une page</h2>
+            <div class="page-buttons">
+                <button class="page-btn active" data-page="index.html">🏠 Accueil</button>
+                <button class="page-btn" data-page="futurs-maries.html">💑 Futurs Mariés</button>
+                <button class="page-btn" data-page="paroisses.html">⛪ Paroisses</button>
+                <button class="page-btn" data-page="musiciens.html">🎵 Musiciens</button>
+                <button class="page-btn" data-page="a-propos.html">ℹ️ À propos</button>
+                <button class="page-btn" data-page="contact.html">📧 Contact</button>
+            </div>
+            
+            <div class="info-box">
+                <p><strong>💡 Astuce :</strong> Cliquez sur une page pour la charger dans tous les appareils ci-dessous.</p>
+                <p><strong>🔍 DevTools :</strong> Ouvrez les DevTools de votre navigateur (F12) et utilisez le mode Responsive pour tester d'autres tailles.</p>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <!-- iPhone SE -->
+            <div class="device-frame">
+                <div class="device-header">
+                    <span class="device-name">📱 iPhone SE</span>
+                    <span class="device-size">375px</span>
+                </div>
+                <div class="iframe-container">
+                    <iframe class="device-iframe" style="height: 667px;" src="index.html"></iframe>
+                </div>
+            </div>
+            
+            <!-- iPhone 14 -->
+            <div class="device-frame">
+                <div class="device-header">
+                    <span class="device-name">📱 iPhone 14</span>
+                    <span class="device-size">390px</span>
+                </div>
+                <div class="iframe-container">
+                    <iframe class="device-iframe" style="height: 844px;" src="index.html"></iframe>
+                </div>
+            </div>
+            
+            <!-- Samsung Galaxy -->
+            <div class="device-frame">
+                <div class="device-header">
+                    <span class="device-name">📱 Galaxy S21</span>
+                    <span class="device-size">360px</span>
+                </div>
+                <div class="iframe-container">
+                    <iframe class="device-iframe" style="height: 640px;" src="index.html"></iframe>
+                </div>
+            </div>
+            
+            <!-- iPad -->
+            <div class="device-frame">
+                <div class="device-header">
+                    <span class="device-name">📱 iPad</span>
+                    <span class="device-size">768px</span>
+                </div>
+                <div class="iframe-container">
+                    <iframe class="device-iframe" style="height: 600px;" src="index.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Gestion des boutons de page
+        const pageButtons = document.querySelectorAll('.page-btn');
+        const iframes = document.querySelectorAll('.device-iframe');
+        
+        pageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Retirer la classe active de tous les boutons
+                pageButtons.forEach(b => b.classList.remove('active'));
+                
+                // Ajouter la classe active au bouton cliqué
+                btn.classList.add('active');
+                
+                // Charger la page dans tous les iframes
+                const page = btn.getAttribute('data-page');
+                iframes.forEach(iframe => {
+                    iframe.src = page;
+                });
+            });
+        });
+        
+        console.log('✨ Test Responsive chargé avec succès !');
+        console.log('📱 Testez les pages sur différents appareils ci-dessus');
+    </script>
+</body>
+</html>

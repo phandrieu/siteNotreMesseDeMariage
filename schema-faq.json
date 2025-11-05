@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment organiser une messe de mariage ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour organiser une messe de mariage, suivez ces étapes : 1) Contactez votre paroisse pour fixer la date, 2) Inscrivez-vous sur Notre Messe de Mariage, 3) Choisissez vos chants et textes liturgiques dans notre répertoire, 4) Collaborez avec votre musicien et votre paroisse via la plateforme, 5) Générez automatiquement votre livret de messe personnalisé. Notre plateforme centralise toute la préparation en un seul endroit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels chants choisir pour une messe de mariage ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une messe de mariage comprend généralement 4 à 5 chants : un chant d'entrée, un chant pour la procession des offrandes, un chant de communion, et un chant de sortie. Notre Messe de Mariage propose un catalogue complet de chants liturgiques adaptés, avec des suggestions par moment de la cérémonie. Vous pouvez écouter les extraits et consulter les paroles avant de faire votre choix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte un musicien pour une messe de mariage ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le tarif d'un musicien pour une messe de mariage varie généralement entre 200€ et 800€ selon l'expérience, la région, et la formule choisie (solo, duo, ensemble). Sur Notre Messe de Mariage, vous pouvez consulter les profils et tarifs des musiciens référencés et les contacter directement via la plateforme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment créer un livret de messe ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notre Messe de Mariage génère automatiquement votre livret de messe personnalisé au format PDF. Il vous suffit de : 1) Choisir vos chants dans le répertoire, 2) Sélectionner vos textes liturgiques, 3) Ajouter vos prières personnelles, 4) Cliquer sur 'Générer le livret'. Le document est prêt à imprimer avec une mise en page professionnelle incluant paroles, photos et personnalisation graphique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que mettre dans un livret de messe de mariage ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un livret de messe de mariage doit contenir : le déroulement de la cérémonie, les paroles complètes des chants, les textes liturgiques (lectures, psaume, évangile), les intentions de prière, et optionnellement une photo du couple et des remerciements. Notre Messe de Mariage inclut automatiquement tous ces éléments dans le livret généré."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment se déroule une messe de mariage catholique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une messe de mariage catholique suit ce déroulement : 1) Rite d'ouverture avec procession d'entrée, 2) Liturgie de la Parole (lectures, psaume, évangile, homélie), 3) Célébration du mariage (échange des consentements et des alliances), 4) Liturgie eucharistique (offertoire, consécration, communion), 5) Rite de conclusion. La durée totale est d'environ 1h à 1h30. Notre plateforme vous aide à préparer chaque étape."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Notre Messe de Mariage est-elle gratuite ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notre Messe de Mariage propose différentes formules adaptées à vos besoins. L'inscription de base permet d'accéder au répertoire de chants et de découvrir la plateforme. Des options payantes incluent la génération illimitée de livrets personnalisés, l'accès aux partitions complètes, et les services de coordination avancée. Consultez notre page tarifs pour plus de détails."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je utiliser Notre Messe de Mariage si je ne suis pas en France ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui ! Bien que notre plateforme soit principalement destinée aux mariages en France et au répertoire francophone, elle est accessible depuis n'importe quel pays. Les couples se mariant à l'étranger peuvent utiliser tous nos outils de création de livret et de sélection de chants. Le répertoire contient également des chants en latin adaptés aux cérémonies internationales."
+      }
+    }
+  ]
+}

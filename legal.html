@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Consent Manager -->
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/js/semiautomatic.min.js" data-cmp-cdid="cddecdb8e2906" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Informations légales - Notre Messe de Mariage</title>
+    <meta name="description" content="Retrouvez toutes les informations légales concernant l'utilisation de Notre Messe de Mariage : CGV, mentions légales, politique de confidentialité.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.notremessedemariage.fr/legal.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6FSDFVMYG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B6FSDFVMYG');
+    </script>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <style>
+        /* Legal Section - Style cohérent avec le site */
+        .legal-section {
+            padding: 180px 0 80px;
+            background: linear-gradient(180deg, 
+                rgba(230, 222, 246, 0.3) 0%, 
+                rgba(255, 255, 255, 1) 40%,
+                rgba(255, 255, 255, 1) 100%
+            );
+            min-height: 100vh;
+        }
+        
+        .legal-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .legal-header {
+            text-align: center;
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .legal-header h1 {
+            font-family: 'Alfarn', serif;
+            font-size: 4rem;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 400;
+        }
+        
+        .legal-header p {
+            font-family: 'Avenir LT Pro', sans-serif;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .legal-tabs {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .tabs-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, var(--color-tertiary) 0%, rgba(230, 222, 246, 0.5) 100%);
+            border-bottom: 3px solid var(--color-primary);
+            padding: 10px;
+            gap: 5px;
+        }
+        
+        .tab-button {
+            flex: 1;
+            min-width: 180px;
+            padding: 18px 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            font-family: 'Avenir LT Pro', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-secondary);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tab-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 129, 0, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .tab-button:hover::before {
+            left: 100%;
+        }
+        
+        .tab-button:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .tab-button.active {
+            background: white;
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .tabs-content {
+            padding: 60px 80px;
+            background: white;
+            margin-top:50px;
+        }
+        
+        .tab-panel {
+            display: none;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .tab-panel.active {
+            display: block;
+        }
+        
+        .tab-panel h2 {
+            font-family: 'Alfarn', serif;
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 400;
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: 15px;
+        }
+        
+        .tab-panel h3 {
+            font-family: 'Alfarn', serif;
+            font-size: 1.6rem;
+            color: var(--color-secondary);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 0.03em;
+            font-weight: 400;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .tab-panel h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 70%;
+            background: var(--color-primary);
+            border-radius: 3px;
+        }
+        
+        .tab-panel p {
+            font-family: 'Avenir LT Pro', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        .tab-panel ul {
+            margin: 25px 0;
+            padding-left: 40px;
+        }
+        
+        .tab-panel li {
+            font-family: 'Avenir LT Pro', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .tab-panel li::marker {
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .legal-container {
+                padding: 0 30px;
+            }
+            
+            .tabs-content {
+                padding: 50px 50px;
+                margin-top: 50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .legal-section {
+                padding: 120px 0 60px;
+            }
+            
+            .legal-container {
+                padding: 0 20px;
+            }
+            
+            .legal-header {
+                margin-bottom: 50px;
+            }
+            
+            .legal-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .legal-header p {
+                font-size: 1rem;
+            }
+            
+            .tabs-navigation {
+                padding: 8px;
+            }
+            
+            .tab-button {
+                min-width: 140px;
+                padding: 14px 18px;
+                font-size: 0.8rem;
+            }
+            
+            .tabs-content {
+                padding: 35px 25px;
+                margin-top: 350px;
+            }
+            
+            .tab-panel h2 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            .tab-panel h3 {
+                font-size: 1.3rem;
+                margin-top: 30px;
+            }
+            
+            .tab-panel p,
+            .tab-panel li {
+                font-size: 0.95rem;
+                text-align: left;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            .tab-button {
+                min-width: 100%;
+                font-size: 0.85rem;
+            }
+            
+            .tabs-content {
+                padding: 25px 20px;
+                margin-top: 350px;
+            }
+            
+            .tab-panel h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Notre Messe de Mariage - Accueil">
+                <img src="images/Fichier%2038@3x.png" onerror="this.onerror=null;this.src='images/logo_avectexte_horizontal.png';" alt="Notre Messe de Mariage - Logo" width="200" height="50">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="futurs-maries.html">Futurs Mariés</a></li>
+                <li><a href="paroisses.html">Paroisses</a></li>
+                <li><a href="musiciens.html">Musiciens</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li>
+                    <a class="nav-icon" href="https://www.instagram.com/notremessedemariage" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Ouvre dans un nouvel onglet">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li><a href="https://app.notremessedemariage.fr" class="cta-button">Inscription/Connexion</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Legal Section -->
+    <section class="legal-section">
+        <div class="legal-container">
+            <div class="legal-header">
+                <h1>Informations légales</h1>
+                <p>Retrouvez toutes les informations légales concernant l'utilisation de notre plateforme</p>
+            </div>
+
+            <div class="legal-tabs">
+                <nav class="tabs-navigation" role="tablist">
+                    <button class="tab-button active" data-tab="cgv" role="tab" aria-selected="true" aria-controls="cgv-panel">
+                        Conditions générales de vente et d'abonnement
+                    </button>
+                    <button class="tab-button" data-tab="mentions" role="tab" aria-selected="false" aria-controls="mentions-panel">
+                        Mentions légales
+                    </button>
+                    <button class="tab-button" data-tab="cookies" role="tab" aria-selected="false" aria-controls="cookies-panel">
+                        Charte cookies
+                    </button>
+                    <button class="tab-button" data-tab="cgu" role="tab" aria-selected="false" aria-controls="cgu-panel">
+                        Conditions générales d'utilisation
+                    </button>
+                    <button class="tab-button" data-tab="propriete" role="tab" aria-selected="false" aria-controls="propriete-panel">
+                        Politique de droits de propriété intellectuelle
+                    </button>
+                    <button class="tab-button" data-tab="confidentialite" role="tab" aria-selected="false" aria-controls="confidentialite-panel">
+                        Politique de confidentialité
+                    </button>
+                </nav>
+
+                <div class="tabs-content">
+                    <!-- CGV Panel -->
+                    <div id="cgv-panel" class="tab-panel active" role="tabpanel" aria-labelledby="cgv">
+                        <h2>Conditions générales de vente et d'abonnement</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                        <h3>Article 1 - Objet</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <h3>Article 2 - Prix</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        
+                        <h3>Article 3 - Durée et renouvellement</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+                    </div>
+
+                    <!-- Mentions légales Panel -->
+                    <div id="mentions-panel" class="tab-panel" role="tabpanel" aria-labelledby="mentions">
+                        <h2>Mentions légales</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                        <h3>Éditeur du site</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <h3>Hébergement</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        
+                        <h3>Directeur de publication</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+
+                    <!-- Charte cookies Panel -->
+                    <div id="cookies-panel" class="tab-panel" role="tabpanel" aria-labelledby="cookies">
+                        <h2>Charte cookies</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                        <h3>Qu'est-ce qu'un cookie ?</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <h3>Cookies utilisés</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        
+                        <h3>Gestion des cookies</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                    </div>
+
+                    <!-- CGU Panel -->
+                    <div id="cgu-panel" class="tab-panel" role="tabpanel" aria-labelledby="cgu">
+                        <h2>Conditions générales d'utilisation</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                        <h3>Acceptation des conditions</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <h3>Utilisation de la plateforme</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        
+                        <h3>Responsabilités</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                    </div>
+
+                    <!-- Propriété intellectuelle Panel -->
+                    <div id="propriete-panel" class="tab-panel" role="tabpanel" aria-labelledby="propriete">
+                        <h2>Politique de droits de propriété intellectuelle</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                        <h3>Propriété du contenu</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <h3>Utilisation du contenu</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        
+                        <h3>Marques et logos</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                    </div>
+
+                    <!-- Confidentialité Panel -->
+                    <div id="confidentialite-panel" class="tab-panel" role="tabpanel" aria-labelledby="confidentialite">
+                        <h2>Politique de confidentialité</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                        <h3>Données collectées</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <h3>Utilisation des données</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        
+                        <h3>Protection des données</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                        
+                        <h3>Vos droits</h3>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="footer-compact">
+        <div class="footer-container footer-compact">
+            <!-- Ligne 1: Marque + réseaux -->
+            <div class="footer-row brand-row">
+                <div class="brand">
+                    <h3>Notre Messe de Mariage</h3>
+                    <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
+                </div>
+            </div>
+
+            <!-- Ligne 2: Liens support (sur une seule ligne) -->
+            <div class="footer-row links-row" aria-label="Support">
+                <ul class="footer-links">
+                    <li><a href="legal.html#cgv">Conditions générales de vente et d'abonnement</a></li>
+                    <li><a href="legal.html#mentions">Mentions légales</a></li>
+                    <li><a href="legal.html#cookies">Charte cookies</a></li>
+                    <li><a href="legal.html#cgu">Conditions générales d'utilisations</a></li>
+                    <li><a href="legal.html#propriete">Politique de droits de propriété intellectuelle</a></li>
+                    <li><a href="legal.html#confidentialite">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+
+            <!-- Ligne 3: Contact (mail + téléphone en ligne) -->
+            <div class="footer-row contact-row">
+                <ul class="footer-contact">
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a></li>
+                </ul>
+            </div>
+            <!-- Icône social, centré juste au-dessus du copyright -->
+            <div class="footer-social">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/notremessedemariage" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Notre Messe de Mariage. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tabs functionality
+        (function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            
+            // Handle tab clicks
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+                    
+                    // Remove active class from all buttons and panels
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    tabPanels.forEach(panel => panel.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding panel
+                    button.classList.add('active');
+                    button.setAttribute('aria-selected', 'true');
+                    document.getElementById(`${targetTab}-panel`).classList.add('active');
+                    
+                    // Update URL hash without scrolling
+                    history.replaceState(null, null, `#${targetTab}`);
+                });
+            });
+            
+            // Handle initial hash on page load
+            function handleHash() {
+                const hash = window.location.hash.substring(1);
+                if (hash) {
+                    const targetButton = document.querySelector(`[data-tab="${hash}"]`);
+                    if (targetButton) {
+                        targetButton.click();
+                    }
+                }
+            }
+            
+            // Check hash on load and on hash change
+            handleHash();
+            window.addEventListener('hashchange', handleHash);
+        })();
+    </script>
+    <script src="animations.js"></script>
+</body>
+</html>

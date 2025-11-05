@@ -1,0 +1,32 @@
+# Robots.txt pour Notre Messe de Mariage
+# https://www.notremessedemariage.fr
+
+# Permettre à tous les robots d'indexer le site
+User-agent: *
+Allow: /
+
+# Bloquer l'accès aux fichiers techniques et dossiers sensibles
+Disallow: /fonts/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /contents.txt
+Disallow: /*.md$
+
+# Bloquer les robots malveillants connus
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://www.notremessedemariage.fr/sitemap.xml
+
+# Crawl-delay pour les bots respectueux (optionnel)
+Crawl-delay: 1

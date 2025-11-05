@@ -3,35 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paroisses - Notre Messe de Mariage</title>
-    <meta name="description" content="Centralisez la préparation de tous les mariages en un seul espace. Accompagnez les couples dans leur préparation liturgique.">
+    
+    <!-- Consent Manager -->
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/js/semiautomatic.min.js" data-cmp-cdid="cddecdb8e2906" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Paroisses - Gérez vos Mariages Religieux | Notre Messe de Mariage</title>
+    <meta name="description" content="Solution gratuite pour paroisses : centralisez la préparation des mariages, accompagnez les couples dans leur préparation liturgique, validez les déroulés de cérémonie. Outil moderne pour églises.">
+    <meta name="keywords" content="paroisse, église catholique, gestion mariages, préparation liturgique, célébration mariage, validation liturgie, accompagnement couples, mariage religieux, sacrement mariage, diocèse, prêtre, diacre, équipe paroissiale, pastorale des mariages">
+    <meta name="author" content="Notre Messe de Mariage">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.notremessedemariage.fr/paroisses.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.notremessedemariage.fr/paroisses.html">
+    <meta property="og:title" content="Paroisses - Gérez vos Mariages Religieux">
+    <meta property="og:description" content="Solution gratuite pour paroisses : gestion des mariages, accompagnement des couples, validation liturgique. Outil moderne et efficace.">
+    <meta property="og:image" content="https://www.notremessedemariage.fr/images/pexels-leonardo-delsabio-2150529415-32392965.jpg">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.notremessedemariage.fr/paroisses.html">
+    <meta name="twitter:title" content="Paroisses - Gérez vos Mariages Religieux">
+    <meta name="twitter:description" content="Outil de gestion pour paroisses : centralisez vos mariages, accompagnez les couples, validez la liturgie.">
+    <meta name="twitter:image" content="https://www.notremessedemariage.fr/images/pexels-leonardo-delsabio-2150529415-32392965.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6FSDFVMYG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B6FSDFVMYG');
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo_avectexte_horizontal.png" alt="Notre Messe de Mariage">
+            <a href="index.html" class="logo" aria-label="Notre Messe de Mariage - Accueil">
+                <img src="images/Fichier%2038@3x.png" onerror="this.onerror=null;this.src='images/logo_avectexte_horizontal.png';" alt="Notre Messe de Mariage - Logo" width="200" height="50">
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="futurs-maries.html">Futurs Mariés</a></li>
-                <li><a href="paroisses.html">Paroisses</a></li>
+                <li><a href="paroisses.html" aria-current="page">Paroisses</a></li>
                 <li><a href="musiciens.html">Musiciens</a></li>
                 <li><a href="a-propos.html">À propos</a></li>
+                <li>
+                    <a class="nav-icon" href="https://www.instagram.com/notremessedemariage" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Ouvre dans un nouvel onglet">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
                 <li><a href="https://app.notremessedemariage.fr" class="cta-button">Inscription/Connexion</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="page-hero">
+    <section class="page-hero paroisses">
         <div class="page-hero-content">
             <h1>Paroisses</h1>
             <p>Simplifiez la gestion des célébrations de mariage dans votre paroisse. Une solution moderne et gratuite pour accompagner les futurs époux avec professionnalisme.</p>
@@ -219,42 +263,49 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Notre Messe de Mariage</h3>
-                <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
-                <div class="social-links">
-<a href="https://instagram.com/notremessedemariage"><i class="fab fa-instagram"></i></a>
+    <footer role="contentinfo" class="footer-compact">
+        <div class="footer-container footer-compact">
+            <!-- Ligne 1: Marque + réseaux -->
+            <div class="footer-row brand-row">
+                <div class="brand">
+                    <h3>Notre Messe de Mariage</h3>
+                    <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>Liens rapides</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="futurs-maries.html">Futurs Mariés</a></li>
-                    <li><a href="paroisses.html">Paroisses</a></li>
-                    <li><a href="musiciens.html">Musiciens</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul>
 
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
+            <!-- Ligne 2: Liens support (sur une seule ligne) -->
+            <div class="footer-row links-row" aria-label="Support">
+                <ul class="footer-links">
+                    <li><a href="legal.html#cgv">Conditions générales de vente et d'abonnement</a></li>
+                    <li><a href="legal.html#mentions">Mentions légales</a></li>
+                    <li><a href="legal.html#cookies">Charte cookies</a></li>
+                    <li><a href="legal.html#cgu">Conditions générales d'utilisations</a></li>
+                    <li><a href="legal.html#propriete">Politique de droits de propriété intellectuelle</a></li>
+                    <li><a href="legal.html#confidentialite">Politique de confidentialité</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p><i class="fas fa-envelope"></i> contact@notremessedemariage.fr</p>
-                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+
+            <!-- Ligne 3: Contact (mail + téléphone en ligne) -->
+            <div class="footer-row contact-row">
+                <ul class="footer-contact">
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a></li>
+                </ul>
+            </div>
+            <!-- Icône social, centré juste au-dessus du copyright -->
+            <div class="footer-social">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/notremessedemariage" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Notre Messe de Mariage. Tous droits réservés.</p>
+            <p>&copy; 2025 Notre Messe de Mariage. Tous droits réservés.</p>
+        </div>
+        <!-- SEO Hidden Keywords for Paroisses -->
+        <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+            <span>paroisse catholique gestion, église diocésaine, communauté paroissiale, curé paroisse, prêtre officiant, diacre permanent, équipe pastorale, équipe animation liturgique, service préparation mariage, pastorale familiale, accompagnement couples, formation au mariage, parcours préparation mariés, réunions couples fiancés, entretien prénuptial, constitution dossier canonique, demande mariage religieux, publication bans église, dispense mariage mixte, certificat catholique, extrait baptême récent, certificat confirmation, acte état civil, autorisation évêque, permission curé, célébration mariage paroissiale, messe mariage cathédrale, bénédiction nuptiale, sacrement mariage administration, liturgie mariage validation, conformité rituel romain, missel romain mariage, rituel célébration mariage, lectures autorisées mariage, évangiles proposés mariage, textes liturgiques approuvés, chants liturgiques conformes, répertoire diocésain chants, catalogue musique sacrée, partitions officielles église, validation choix musicaux, approbation textes personnalisés, prière époux vérification, prière universelle révision, intentions messe mariage, homélie mariage préparation, mot accueil assemblée, présentation mariés, témoins mariage désignation, lecteurs formation, servants autel mariage, participation enfants honneur, sacristain préparation, organiste titulaire paroisse, chorale paroissiale, bénévoles accueil église, équipe fleurissement, décoration église sobre, aménagement nef mariage, bancs réservés famille, livret cérémonie distribution, feuillet messe impression, programme célébration, planning mariages annuel, calendrier disponibilités église, réservation dates mariage, horaires célébrations, durée messe mariage, timing répétition générale, rencontre préparatoire, derniers détails organisation, coordination jour J, accueil mariés sacristie, signature registres paroissiaux, acte mariage religieux, certificat mariage catholique, archivage documents, conservation registres, secrétariat paroisse, permanences accueil, contact presbytère, numéro urgence curé, adresse paroisse, localisation église GPS, accès handicapés, parking église, transport invités, sonnerie cloches mariage, photographie église autorisations, vidéo cérémonie règles, conditions utilisation locaux, contribution financière, offrande messe mariage, honoraire prêtre, participation frais église, don paroisse, quête mariage, intention messe</span>
         </div>
     </footer>
 

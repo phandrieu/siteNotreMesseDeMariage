@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <!-- Consent Manager -->
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/js/semiautomatic.min.js" data-cmp-cdid="cddecdb8e2906" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
+    
     <!-- SEO Meta Tags -->
     <title>À propos - Notre Messe de Mariage | Notre mission et nos valeurs</title>
     <meta name="description" content="Découvrez Notre Messe de Mariage, l'outil en ligne qui accompagne couples, paroisses et musiciens dans la préparation des célébrations de mariage. Notre mission, notre histoire et nos valeurs.">
@@ -16,6 +19,16 @@
     <meta property="og:url" content="https://www.notremessedemariage.fr/a-propos.html">
     <meta property="og:title" content="À propos - Notre Messe de Mariage">
     <meta property="og:description" content="Découvrez notre mission et nos valeurs pour accompagner couples, paroisses et musiciens.">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6FSDFVMYG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B6FSDFVMYG');
+    </script>
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -29,7 +42,7 @@
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
             <a href="index.html" class="logo" aria-label="Notre Messe de Mariage - Accueil">
-                <img src="images/logo_avectexte_horizontal.png" alt="Notre Messe de Mariage - Logo" width="200" height="50">
+                <img src="images/Fichier%2038@3x.png" onerror="this.onerror=null;this.src='images/logo_avectexte_horizontal.png';" alt="Notre Messe de Mariage - Logo" width="200" height="50">
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Accueil</a></li>
@@ -37,6 +50,11 @@
                 <li><a href="paroisses.html">Paroisses</a></li>
                 <li><a href="musiciens.html">Musiciens</a></li>
                 <li><a href="a-propos.html" aria-current="page">À propos</a></li>
+                <li>
+                    <a class="nav-icon" href="https://www.instagram.com/notremessedemariage" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Ouvre dans un nouvel onglet">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
                 <li><a href="https://app.notremessedemariage.fr" class="cta-button">Inscription/Connexion</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile" aria-expanded="false">
@@ -208,46 +226,41 @@
     </section>
 
     <!-- Footer -->
-    <footer role="contentinfo">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Notre Messe de Mariage</h3>
-                <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
+    <footer role="contentinfo" class="footer-compact">
+        <div class="footer-container footer-compact">
+            <!-- Ligne 1: Marque + réseaux -->
+            <div class="footer-row brand-row">
+                <div class="brand">
+                    <h3>Notre Messe de Mariage</h3>
+                    <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
+                </div>
+            </div>
+
+            <!-- Ligne 2: Liens support (sur une seule ligne) -->
+            <div class="footer-row links-row" aria-label="Support">
+                <ul class="footer-links">
+                    <li><a href="legal.html#cgv">Conditions générales de vente et d'abonnement</a></li>
+                    <li><a href="legal.html#mentions">Mentions légales</a></li>
+                    <li><a href="legal.html#cookies">Charte cookies</a></li>
+                    <li><a href="legal.html#cgu">Conditions générales d'utilisations</a></li>
+                    <li><a href="legal.html#propriete">Politique de droits de propriété intellectuelle</a></li>
+                    <li><a href="legal.html#confidentialite">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+
+            <!-- Ligne 3: Contact (mail + téléphone en ligne) -->
+            <div class="footer-row contact-row">
+                <ul class="footer-contact">
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a></li>
+                </ul>
+            </div>
+            <!-- Icône social, centré juste au-dessus du copyright -->
+            <div class="footer-social">
                 <div class="social-links">
-                    <a href="https://www.facebook.com/notremessedemariage" aria-label="Suivez-nous sur Facebook" rel="noopener noreferrer" target="_blank">
-                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                    </a>
                     <a href="https://www.instagram.com/notremessedemariage" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer" target="_blank">
                         <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://twitter.com/notremessedemariage" aria-label="Suivez-nous sur Twitter" rel="noopener noreferrer" target="_blank">
-                        <i class="fab fa-twitter" aria-hidden="true"></i>
-                    </a>
                 </div>
-            </div>
-            <div class="footer-section" aria-label="Liens rapides">
-                <h3>Liens rapides</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="futurs-maries.html">Futurs Mariés</a></li>
-                    <li><a href="paroisses.html">Paroisses</a></li>
-                    <li><a href="musiciens.html">Musiciens</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section" aria-label="Support">
-                <h3>Support</h3>
-                <ul>
-
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a></p>
-                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
             </div>
         </div>
         <div class="footer-bottom">

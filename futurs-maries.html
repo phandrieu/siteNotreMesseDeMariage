@@ -3,35 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futurs Mariés - Notre Messe de Mariage</title>
-    <meta name="description" content="Préparez sereinement la musique et les textes de votre messe de mariage. Choisissez vos chants, sélectionnez vos lectures et créez votre livret personnalisé.">
+    
+    <!-- Consent Manager -->
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/js/semiautomatic.min.js" data-cmp-cdid="cddecdb8e2906" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Futurs Mariés - Organisez votre Messe de Mariage | Notre Messe de Mariage</title>
+    <meta name="description" content="Préparez sereinement la musique et les textes de votre messe de mariage. Choisissez vos chants, sélectionnez vos lectures, créez votre livret personnalisé et collaborez avec votre paroisse et musicien.">
+    <meta name="keywords" content="futurs mariés, messe de mariage, organisation mariage religieux, chants mariage, livret messe, textes liturgiques, lectures mariage, psaume mariage, évangile mariage, prière des époux, préparation mariage catholique, cérémonie religieuse, musicien mariage église">
+    <meta name="author" content="Notre Messe de Mariage">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.notremessedemariage.fr/futurs-maries.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.notremessedemariage.fr/futurs-maries.html">
+    <meta property="og:title" content="Futurs Mariés - Organisez votre Messe de Mariage">
+    <meta property="og:description" content="Préparez sereinement votre messe de mariage : chants, textes liturgiques, livret personnalisé. Collaboration facilitée avec paroisse et musiciens.">
+    <meta property="og:image" content="https://www.notremessedemariage.fr/images/josh-applegate-nKJzYDP10Zw-unsplash.jpg">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.notremessedemariage.fr/futurs-maries.html">
+    <meta name="twitter:title" content="Futurs Mariés - Organisez votre Messe de Mariage">
+    <meta name="twitter:description" content="Préparez sereinement votre messe de mariage avec Notre Messe de Mariage. Tout pour une cérémonie mémorable.">
+    <meta name="twitter:image" content="https://www.notremessedemariage.fr/images/josh-applegate-nKJzYDP10Zw-unsplash.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6FSDFVMYG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B6FSDFVMYG');
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo_avectexte_horizontal.png" alt="Notre Messe de Mariage">
+            <a href="index.html" class="logo" aria-label="Notre Messe de Mariage - Accueil">
+                <img src="images/Fichier%2038@3x.png" onerror="this.onerror=null;this.src='images/logo_avectexte_horizontal.png';" alt="Notre Messe de Mariage - Logo" width="200" height="50">
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="futurs-maries.html">Futurs Mariés</a></li>
+                <li><a href="futurs-maries.html" aria-current="page">Futurs Mariés</a></li>
                 <li><a href="paroisses.html">Paroisses</a></li>
                 <li><a href="musiciens.html">Musiciens</a></li>
                 <li><a href="a-propos.html">À propos</a></li>
+                <li>
+                    <a class="nav-icon" href="https://www.instagram.com/notremessedemariage" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Ouvre dans un nouvel onglet">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
                 <li><a href="https://app.notremessedemariage.fr" class="cta-button">Inscription/Connexion</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="page-hero">
+    <section class="page-hero photo">
         <div class="page-hero-content">
             <h1>Futurs Mariés</h1>
             <p>Transformez votre cérémonie religieuse en un moment d'exception. Notre plateforme vous accompagne pas à pas dans la préparation musicale et liturgique de votre messe de mariage.</p>
@@ -178,42 +222,49 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Notre Messe de Mariage</h3>
-                <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
-                <div class="social-links">
-<a href="https://instagram.com/notremessedemariage"><i class="fab fa-instagram"></i></a>
+    <footer role="contentinfo" class="footer-compact">
+        <div class="footer-container footer-compact">
+            <!-- Ligne 1: Marque + réseaux -->
+            <div class="footer-row brand-row">
+                <div class="brand">
+                    <h3>Notre Messe de Mariage</h3>
+                    <p>La plateforme qui rend l'organisation de votre messe de mariage simple et mémorable.</p>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>Liens rapides</h3>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="futurs-maries.html">Futurs Mariés</a></li>
-                    <li><a href="paroisses.html">Paroisses</a></li>
-                    <li><a href="musiciens.html">Musiciens</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Support</h3>
-                <ul>
 
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
+            <!-- Ligne 2: Liens support (sur une seule ligne) -->
+            <div class="footer-row links-row" aria-label="Support">
+                <ul class="footer-links">
+                    <li><a href="legal.html#cgv">Conditions générales de vente et d'abonnement</a></li>
+                    <li><a href="legal.html#mentions">Mentions légales</a></li>
+                    <li><a href="legal.html#cookies">Charte cookies</a></li>
+                    <li><a href="legal.html#cgu">Conditions générales d'utilisations</a></li>
+                    <li><a href="legal.html#propriete">Politique de droits de propriété intellectuelle</a></li>
+                    <li><a href="legal.html#confidentialite">Politique de confidentialité</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p><i class="fas fa-envelope"></i> contact@notremessedemariage.fr</p>
-                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+
+            <!-- Ligne 3: Contact (mail + téléphone en ligne) -->
+            <div class="footer-row contact-row">
+                <ul class="footer-contact">
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@notremessedemariage.fr">contact@notremessedemariage.fr</a></li>
+                </ul>
+            </div>
+            <!-- Icône social, centré juste au-dessus du copyright -->
+            <div class="footer-social">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/notremessedemariage" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
+        <!-- SEO Hidden Keywords for Futurs Mariés -->
+        <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+            <span>futurs mariés préparation, organisation mariage religieux couple, choix chants messe mariage, sélection textes liturgiques, création livret messe personnalisé, personnalisation cérémonie mariage, collaboration paroisse couple, coordination musicien mariage, lectures bibliques mariage, première lecture mariage, psaume responsorial, deuxième lecture mariage, évangile du mariage, acclamation évangile, prière des époux personnalisée, prière universelle mariés, prière fidèles mariage, désignation lecteurs, lecteur première lecture, lecteur psaume, choix textes bibliques, textes recommandés mariage, textes liturgie mariage catholique, répertoire chants mariage, catalogue chants religieux, chants entrée processionnelle, chants préparation dons, chants communion mariés, chants sortie église, chant action de grâce, musique sacrée mariage, animation musicale cérémonie, duo musical mariage église, soliste messe mariage, chorale mariage paroisse, recherche musicien mariage, trouver organiste mariage, guitariste messe mariage, chanteuse liturgique, validation déroulé paroisse, approbation liturgie prêtre, conformité liturgique mariage, respect tradition catholique, planification cérémonie étape par étape, guide préparation mariage religieux, aide organisation messe, outil numérique couple marié, plateforme collaborative mariage, générateur livret messe, création automatique documents, PDF livret personnalisé, impression livret invités, distribution livret cérémonie, design livret messe, mise en page professionnelle, photos couple livret, personnalisation graphique, suivi préparation mariage, notifications étapes, checklist mariage religieux, deadline préparation, rappels automatiques, partage informations mariage, échange avec équipe, espace couple dédié, compte personnel mariés, accès sécurisé plateforme, confidentialité données couple</span>
+        </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Notre Messe de Mariage. Tous droits réservés.</p>
+            <p>&copy; 2025 Notre Messe de Mariage. Tous droits réservés.</p>
         </div>
     </footer>
 
