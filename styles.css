@@ -233,7 +233,9 @@ nav.scrolled .nav-links a {
     box-shadow: 0 4px 15px rgba(255, 129, 0, 0.35);
     position: relative;
     overflow: hidden;
-    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-button:hover {
