@@ -43,7 +43,7 @@
                         <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li><a href="https://app.notremessedemariage.fr" class="cta-button">Inscription/Connexion</a></li>
+                <li><a href="#" class="cta-button" disabled>Inscription/Connexion</a></li> <!--- Désactivé jusqu'au lancement -->
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile" aria-expanded="false">
                 <i class="fas fa-bars" aria-hidden="true"></i>
@@ -62,18 +62,224 @@
     <!-- Introduction Section -->
     <section class="content-section">
         <div class="content-container">
-            <h2 class="section-title fade-in">Le Principe de la Bibliothèque Partagée</h2>
-            <div class="content-block fade-in">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                </p>
-                <p>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            <h2 class="section-title">Un Répertoire Collaboratif au Service de Tous</h2>
+            <div class="content-block">
+                <p class="lead">
+                    La Bibliothèque Partagée est le cœur de Notre Messe de Mariage. C'est un espace collaboratif qui rassemble 
+                    chants liturgiques, textes bibliques et ressources musicales pour accompagner tous les acteurs de la célébration 
+                    dans la préparation d'une messe ou d'une cérémonie de mariage fidèle à la liturgie et riche en émotion.
                 </p>
             </div>
+        </div>
+    </section>
+
+    <!-- Fonctionnement Section -->
+    <section class="content-section alt">
+        <div class="content-container">
+            <h2 class="section-title">Comment Fonctionne la Bibliothèque ?</h2>
+            
+            <div style="margin-top: 3rem;">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-music"></i> Le Répertoire Global de Chants
+                </h3>
+                <p style="margin-bottom: 1.5rem;">
+                    Au cœur de la plateforme se trouve un <strong>répertoire global de chants liturgiques</strong>, accessible à tous les utilisateurs. 
+                    Ce répertoire constitue une base solide et fidèle à la tradition liturgique, permettant aux couples de faire leurs choix 
+                    musicaux en toute confiance.
+                </p>
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin: 2rem 0;">
+                    <video controls preload="metadata" playsinline style="width: 100%; max-height: 600px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+                        <source src="bibliotheque-partagee.mp4" type="video/mp4">
+                        <p>Votre navigateur ne supporte pas la lecture de vidéos HTML5. <a href="bibliotheque-partagee.mp4" download>Télécharger la vidéo</a></p>
+                    </video>
+                </div>
+
+                <ul class="feature-list">
+                    <li>Chants classés par moment liturgique (entrée, offertoire, communion, sortie...)</li>
+                    <li>Recherche facilitée par mots-clés, thématiques ou références liturgiques</li>
+                    <li>Partitions disponibles en format PDF pour chaque chant</li>
+                    <li>Suggestions adaptées à chaque étape de la célébration</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-book-open"></i> Les Textes Bibliques et Liturgiques
+                </h3>
+                <p style="margin-bottom: 1.5rem;">
+                    La bibliothèque comprend également un <strong>répertoire complet de textes liturgiques</strong> pour structurer 
+                    la célébration dans le respect de la tradition catholique.
+                </p>
+
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin: 2rem 0;">
+                    <img src="images/screenshot-placeholder-textes.jpg" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" 
+                         alt="Capture d'écran du répertoire de textes bibliques" 
+                         style="width: 100%; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+                    <div style="display: none; text-align: center; padding: 4rem; background: linear-gradient(135deg, rgba(255,129,0,0.1), rgba(101,45,144,0.1)); border-radius: 10px; border: 2px dashed var(--color-secondary);">
+                        <i class="fas fa-image" style="font-size: 4rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+                        <p style="color: var(--text-dark); font-weight: 500;">Capture d'écran : Sélection des Textes Bibliques</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Lectures, psaumes et formulations liturgiques</p>
+                    </div>
+                </div>
+
+                <ul class="feature-list">
+                    <li>Lectures bibliques : 1ère lecture, psaume, Évangile</li>
+                    <li>Formulations liturgiques pour le dialogue initial, l'échange des consentements, la bénédiction des alliances</li>
+                    <li>Options pour la bénédiction nuptiale et la bénédiction finale</li>
+                    <li>Possibilité d'importer des prières personnalisées (prière des époux, prière universelle)</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-star"></i> Les Répertoires Personnalisés
+                </h3>
+                <p style="margin-bottom: 1.5rem;">
+                    Au-delà du répertoire global, certains acteurs peuvent enrichir la bibliothèque avec leurs propres ressources :
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                            <i class="fas fa-church"></i> Paroisses Référencées
+                        </h4>
+                        <p>
+                            Les paroisses référencées peuvent créer leur propre répertoire paroissial de chants et de textes liturgiques, 
+                            accessible aux couples qui se marient dans leur église.
+                        </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: var(--color-secondary); margin-bottom: 1rem;">
+                            <i class="fas fa-music"></i> Musiciens Référencés
+                        </h4>
+                        <p>
+                            Les musiciens professionnels référencés mettent à disposition leur répertoire personnel, permettant aux couples 
+                            de découvrir et sélectionner des chants adaptés à leur style musical.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin: 2rem 0;">
+                    <img src="images/screenshot-placeholder-repertoire-perso.jpg" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" 
+                         alt="Capture d'écran d'un répertoire personnalisé" 
+                         style="width: 100%; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+                    <div style="display: none; text-align: center; padding: 4rem; background: linear-gradient(135deg, rgba(255,129,0,0.1), rgba(101,45,144,0.1)); border-radius: 10px; border: 2px dashed var(--color-primary);">
+                        <i class="fas fa-image" style="font-size: 4rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                        <p style="color: var(--text-dark); font-weight: 500;">Capture d'écran : Répertoire Personnalisé d'un Musicien</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Gestion et partage du répertoire personnel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggestions et Validation Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2 class="section-title">Propositions Personnalisées et Validation</h2>
+            
+            <div style="margin-top: 3rem;">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-lightbulb"></i> Enrichissement Collaboratif
+                </h3>
+                <p style="margin-bottom: 1.5rem;">
+                    Les couples ne sont pas limités aux répertoires existants. Ils peuvent <strong>proposer leurs propres chants et textes</strong>, 
+                    qui seront ensuite soumis à validation par leurs partenaires :
+                </p>
+
+                <ul class="feature-list">
+                    <li>Les couples proposent des chants en dehors du répertoire global</li>
+                    <li>Les musiciens valident les suggestions musicales pour s'assurer de leur faisabilité</li>
+                    <li>Les paroisses valident les textes liturgiques pour garantir la conformité</li>
+                    <li>Les suggestions validées apparaissent directement dans le déroulé de la célébration</li>
+                </ul>
+
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin: 2rem 0;">
+                    <img src="images/screenshot-placeholder-validation.jpg" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" 
+                         alt="Capture d'écran du processus de validation" 
+                         style="width: 100%; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+                    <div style="display: none; text-align: center; padding: 4rem; background: linear-gradient(135deg, rgba(255,129,0,0.1), rgba(101,45,144,0.1)); border-radius: 10px; border: 2px dashed var(--color-secondary);">
+                        <i class="fas fa-image" style="font-size: 4rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+                        <p style="color: var(--text-dark); font-weight: 500;">Capture d'écran : Processus de Validation Collaborative</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Suggestions et commentaires intégrés au déroulé</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-check-circle"></i> Un Système de Validation en Temps Réel
+                </h3>
+                <p style="margin-bottom: 1.5rem;">
+                    La plateforme facilite les échanges entre tous les acteurs grâce à un système de commentaires et de validation intégré :
+                </p>
+
+                <ul class="feature-list">
+                    <li>Communication directe via des commentaires sur chaque élément du déroulé</li>
+                    <li>Notifications en temps réel des validations et modifications</li>
+                    <li>Suivi de l'avancement de la préparation pour chaque partie de la célébration</li>
+                    <li>Vision partagée et collaborative du déroulé complet</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages Section -->
+    <section class="content-section alt">
+        <div class="content-container">
+            <h2 class="section-title">Les Avantages de la Bibliothèque Partagée</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Fidélité Liturgique</h4>
+                    <p>Un répertoire validé et conforme à la tradition catholique, garantissant le respect de la liturgie.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-users" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Collaboration Facilitée</h4>
+                    <p>Un espace unique où couples, paroisses et musiciens travaillent ensemble harmonieusement.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-search" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Recherche Intuitive</h4>
+                    <p>Des outils de recherche puissants pour trouver rapidement les chants et textes adaptés.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-file-pdf" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Documents Automatiques</h4>
+                    <p>Génération automatique du déroulé complet et des partitions au format PDF.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-heart" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Personnalisation</h4>
+                    <p>Possibilité d'enrichir la bibliothèque avec vos propres suggestions validées.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-clock" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 1rem;">Gain de Temps</h4>
+                    <p>Tous les outils nécessaires centralisés en un seul endroit pour une préparation efficace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="text-align: center;">
+        <div class="content-container">
+            <h2 class="section-title">Découvrez la Bibliothèque Partagée</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Que vous soyez couple, paroisse ou musicien, la Bibliothèque Partagée vous accompagne dans la préparation 
+                d'une célébration harmonieuse et fidèle à la liturgie.
+            </p>
+            <a href="https://app.notremessedemariage.fr/" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                <i class="fas fa-book-open"></i> Accéder à la Bibliothèque
+            </a>
         </div>
     </section>
 
