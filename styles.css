@@ -3249,3 +3249,234 @@ button:focus {
         justify-content: center;
     }
 }
+
+/* ======================================
+   CLASSES UTILITAIRES ET NETTOYAGE
+   ====================================== */
+
+/* Classe pour cacher le texte SEO */
+.seo-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Texte large pour intro sections */
+.intro-text {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+/* Grilles de contenu */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.content-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Cartes blanches avec ombre */
+.white-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Espacement des sections */
+.section-spacing {
+    margin-top: 3rem;
+}
+
+/* Centrage du texte avec padding */
+.text-center-padded {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Icône grande avec espacement */
+.icon-large {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* Conteneur vidéo responsive */
+.video-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin: 2rem 0;
+}
+
+.video-container video {
+    width: 100%;
+    max-height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur d'image avec placeholder */
+.image-placeholder {
+    display: none;
+    text-align: center;
+    padding: 4rem;
+    background: linear-gradient(135deg, rgba(255, 129, 0, 0.1), rgba(101, 45, 144, 0.1));
+    border-radius: 10px;
+    border: 2px dashed var(--color-secondary);
+}
+
+.image-placeholder i {
+    font-size: 4rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.image-placeholder p {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.image-placeholder p:last-child {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Wrapper pour overflow auto */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Tables stylisées */
+.styled-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.styled-table th {
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.styled-table th.text-center {
+    text-align: center;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background: rgba(255, 129, 0, 0.02);
+}
+
+.styled-table td {
+    padding: 1.2rem;
+}
+
+.styled-table td.text-center {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.styled-table td.font-weight-medium {
+    font-weight: 500;
+}
+
+/* Subsections dans le contenu */
+.subsection {
+    margin-top: 2rem;
+}
+
+/* Amélioration du padding général des cartes */
+.card-padding {
+    padding: 2rem;
+}
+
+/* Hero fullscreen centralisé */
+.hero-fullscreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Liste imbriqu\u00e9e avec marge */
+.nested-list {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+/* Titre de sous-section coloré */
+.subsection-title {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Image responsive avec radius */
+.responsive-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Variante de placeholder pour couleur primaire */
+.image-placeholder-alt {
+    border-color: var(--color-primary);
+}
+
+.image-placeholder-alt i {
+    color: var(--color-primary);
+}
+
+/* Liste avec espacement en bas */
+.feature-list-spaced {
+    margin-bottom: 2rem;
+}
+
+/* Titre de pricing */
+.pricing-title {
+    color: var(--color-secondary);
+    font-size: 1.8rem;
+}
+
+/* Variante de price avec couleur secondaire */
+.price-secondary {
+    color: var(--color-secondary);
+}
+
+/* Carte pricing avec gradient */
+.pricing-card-gradient {
+    background: linear-gradient(135deg, var(--color-tertiary), white);
+}
+
+/* Classe pour texte désactivé (gris) */
+.text-disabled {
+    color: #ccc !important;
+}
